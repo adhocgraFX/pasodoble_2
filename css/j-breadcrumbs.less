@@ -1,0 +1,65 @@
+// breadcrumbs
+
+ul.breadcrumb {
+    line-height: 1.4;
+	padding: 0;
+    margin: .5em;
+	list-style-type: none;
+	overflow: hidden;
+	background: transparent;
+    color: @gainsboro;
+
+	li {
+		list-style: none;
+		position: relative;
+		display: block;
+		float: left;
+		padding: 0;
+		margin: 0;
+
+		&.active {
+			padding: .25em 0;
+
+			span.divider {
+				position: relative;
+				float: left;
+				padding: 0 .25em;
+				color: @gainsboro;
+				line-height: 1.4;
+
+                &::before {
+
+                }
+			}
+		}
+
+		span.divider {
+			position: relative;
+			float: left;
+			padding: .25em;
+			color: @gainsboro;
+			line-height: 1.4;
+		}
+
+		a {
+			text-decoration: none;
+			font-weight: normal;
+			position: relative;
+			display: block;
+			float: left;
+			padding: .25em;
+			color: @whitesmoke;
+			background: transparent;
+
+			&:hover {
+				color: @smoke;
+				background: lighten(@color-primary, 20%);
+			}
+
+			&:focus, &:active {
+				color: @smoke;
+				background: @color-primary;
+			}
+		}
+	}
+}

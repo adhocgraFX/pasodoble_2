@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="localxampp">
+    <serverData>
+      <paths name="localxampp">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="mirror_pasodoble/templates/pasodoble" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

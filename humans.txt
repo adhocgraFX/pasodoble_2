@@ -1,0 +1,28 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Name: Johannes Hock
+
+  e-mail: info@adhocgrafx.de
+
+  Twitter: adhocgraFX
+
+  Location: Haßfurt, Germany
+
+
+# THANKS
+
+  blank template
+
+  Web Starter Kit
+
+
+# TECHNOLOGY COLOPHON
+
+  Last update: 25.04.2015
+
+  Standards: HTML5, CSS3, ...
+
+  Components: jQuery, ...

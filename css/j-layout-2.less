@@ -1,0 +1,261 @@
+// allg stile & farben
+
+.logo-image {
+	overflow: hidden;
+	text-align: center;
+	height: 3em;
+
+	a {
+		width: 100%;
+		height: 3em;
+		display: block;
+		padding: 0;
+		z-index: -1;
+
+		img {
+			height: 100%;
+			width: auto;
+			position: relative;
+			z-index: -1;
+		}
+	}
+}
+
+.search-container {
+	height: 3em;
+    max-height: 3em;
+	overflow: hidden;
+    max-width: 50%;
+}
+
+.textresizer-container {
+    background-color: transparent;
+	text-align: center;
+	height: 3em;
+    max-height: 3em;
+	margin: 0;
+
+	ul  {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+
+		li {
+			float: left;
+			margin: 0;
+
+			a {
+                color: @smoke;
+				display: block;
+				padding: .75em;
+				height: 3em;
+                width: 3em;
+                max-width: 3em;
+
+				&:hover, &:focus {
+                    background-color: @color-link-hover;
+                    text-decoration: none;
+                    outline: 0;
+				}
+
+                &:active, &.textresizer-active {
+                    background-color: transparent;
+                    color: @color-link;
+                    outline: 0;
+                }
+
+				span {
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+}
+
+.main-container {
+    background: @smoke;
+}
+
+main {
+    background: @smoke;
+    padding: .5em !important;
+}
+
+aside {
+    background: @color-primary;
+    // background: @color-aside-back;
+
+    .module {
+        margin: .5em;
+    }
+}
+
+nav {
+	// background: @whitesmoke;
+}
+
+footer {
+	background: @color-primary;
+    font-size: .875em;
+}
+
+.breadcrumbs-container {
+    background: @color-breadcrumbs-back;
+    font-size: .875em;
+    padding: 0 1em;
+
+}
+
+section.slider-container {
+    background: @color-slider-back;
+}
+
+section.top {
+    background: @color-top-row-back;
+}
+
+section.bottom {
+    background: @color-bottom-row-back;
+}
+
+main,
+aside,
+section.top,
+section.bottom,
+section.slider-container,
+section.main-container
+ {
+    .make-block;
+}
+
+footer,
+section.top,
+section.bottom {
+    .flex-display;
+	.flex-flow(row wrap);
+    .justify-content(center);
+
+	.module {
+		.flex(1 1 auto);
+		margin: .5em;
+        min-width: 12em;
+        max-width: 24em;
+        width: 18em;
+
+        &.size-2 {
+            .flex(2 1 auto);
+        }
+
+        &.size-3 {
+            .flex(3 1 auto);
+        }
+
+        &.size-4 {
+            .flex(4 1 auto);
+        }
+    }
+}
+
+.cols-1, .cols-2, .cols-3, .cols-4 {
+    .make-block;
+}
+
+
+
+// media queries // 48 x 16 = 768
+@media screen and (min-width: 47em) {
+
+    section.main-container {
+        .flex-display;
+        .flex-flow(row nowrap);
+        .justify-content(space-between);
+        .align-items(stretch);
+
+        main {
+            margin: 0 auto;
+
+            div, article {
+                margin: .5em auto;
+                max-width: 32em;
+            }
+        }
+
+        aside.sidebar-container {
+            background: @color-aside-back;
+            margin: 0;
+            .flex-display;
+            .flex-flow(row wrap);
+            .justify-content(flex-start);
+            .align-items(stretch);
+            .align-content(flex-start);
+
+            .module {
+                .flex(1 1 auto);
+                margin: .5em;
+                min-width: 10em;
+            }
+        }
+    }
+
+    body.slider {
+
+        section.main-container {
+
+            main {
+                div, article {
+                    max-width: 100% !important;
+                }
+            }
+        }
+    }
+
+    .search-container {
+        background-color: transparent;
+        height: 4em;
+        max-height: 4em;
+    }
+
+    .cols-2 {
+        width: 50%;
+    }
+
+    .cols-3 {
+        width: 33.3333%;
+    }
+
+    .cols-4 {
+        width: 25%;
+    }
+
+    /*
+    section.top, section.bottom, section.wrapper-push, footer, header, nav {
+	    opacity: 0.90;
+	    filter: Alpha(Opacity=90);
+    }
+    */
+
+    .logo-image {
+        position: absolute;
+        left: 0;
+        top: -6em;
+        width: 12em;
+        height: 6em; // 10em;
+
+        a {
+            height: 4em; // 10em;
+            margin: 1em 0; // 0;
+        }
+    }
+}
+
+@media screen and (min-width: 80em) {
+
+    section.main-container main {
+        div, article {
+            max-width: 36em;
+        }
+    }
+}

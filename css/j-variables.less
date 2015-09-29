@@ -1,0 +1,109 @@
+// color Standards editable
+
+// body and basic text colors
+@color-body: @smoke;
+@color-body-copy: @concrete-darker;
+@color-heading: @concrete-dark;
+@color-subheading: @concrete;
+
+// alert boxes
+// warning
+@color-warning: @colorOrange500;
+// error
+@color-error: @colorRed500;
+// success
+@color-success: @colorLightGreen500;
+// info
+@color-info: @colorBlue500;
+
+// primary- und accent-color ala material design
+@color-primary:         @colorIndigo600;
+@color-accent:          @colorOrange600;
+
+// primary und accent text color je nach primary und accent color
+@color-primary-text:    @smoke;
+@color-accent-text:     @whitesmoke;
+
+// section colors
+@color-slider-back:         @gainsboro-dark;
+@color-top-row-back:        @gainsboro-light;
+@color-bottom-row-back:     @concrete;
+@color-aside-back:          @smoke; // on desktop, on mobile > @primary-color
+@color-breadcrumbs-back:    @colorIndigo400;
+
+//
+// editing not recommended
+//
+// color sync
+// brand color mit primary color in sync
+@color-brand:           @color-primary;
+@color-brand-light:     lighten(@color-brand, 5%);
+@color-brand-lighter:   lighten(@color-brand, 10%);
+@color-brand-dark:      darken(@color-brand, 5%);
+@color-brand-darker:    darken(@color-brand, 10%);
+
+// link colors mit accent color in sync
+@color-link:            @color-accent;
+@color-link-hover:      lighten(@color-link, 10%);
+@color-link-focus:      darken(@color-link, 5%);
+@color-link-active:     darken(@color-link, 10%);
+@color-link-visited:    @color-accent; // todo was ist am besten?
+
+
+// Typeplate inspired font variables plus even more ...
+@weight: normal;
+
+@line-height-default:   1.4;
+@line-height-medium:    1.5;
+@line-height-large:     1.6;
+
+@line-height-heading:   1.1;
+
+@font-size-default: 100%;
+@font-size-medium:  112.5%; // percentage value (16 * 112.5% = 18px)
+@font-size-large:   125%; // percentage value (16 * 125% = 20px)
+
+@font-size-small:   87.5%; // percentage value (16 * 87.5% = 14px)
+@font-size-mini:    75%; // percentage value (16 * 75% = 12px)
+
+// primary fonts to select
+@body-font:    'Fira Sans';
+@heading-font: 'Fira Sans';
+@mono-font:    'Fira Mono';
+
+// weights to choose and combine
+@thin:          100;
+@hairline:      @thin;
+
+@extra-light:   200;
+
+@light:         300;
+
+@book:          400;
+@normal:        @book;
+
+@medium:        500;
+
+@semibold:      600;
+@demibold:      @semibold;
+
+@bold:          700;
+
+@extra-bold:    800;
+@heavy:         @extra-bold;
+
+@black:         900;
+
+// TypeScale Unit
+@type-scale-unit-value: em;
+
+
+// Text Indentation Value, space between paragraphs
+@indent-val: 1.5em;
+@paragraph-val: @indent-val / 2;
+@small-paragraph-val: @indent-val / 4;
+
+
+// bootstrap variables
+@baseBorderRadius: .2em;
+@shadow: @gainsboro;
