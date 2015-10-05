@@ -44,8 +44,18 @@ $buttonlink = $this->params->get('buttonlink');
 $this->setGenerator(null);
 
 // Add Joomla! JavaScript Framework
-JHtml::_('bootstrap.framework');
-// JHtml::_('jquery.framework');
+// JHtml::_('bootstrap.framework');
+
+// unset javascript file from head
+// unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery.min.js']);
+// unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-noconflict.js']);
+// unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-migrate.min.js']);
+// unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
+// unset($doc->_scripts[$this->baseurl.'/media/jui/js/bootstrap.min.js']);
+// unset($doc->_scripts[$this->baseurl.'/media/system/js/html5fallback.js']);
+
+// add jquery framework
+JHtml::_('jquery.framework');
 
 ?>
 

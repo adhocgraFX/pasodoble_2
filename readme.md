@@ -25,4 +25,4 @@ PasoDoble-2
 ###Work in progress!
 
 #### todos:
-* hl gral
+* der heilige Gral - die Suche geht weiter :)
