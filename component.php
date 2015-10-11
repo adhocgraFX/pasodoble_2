@@ -12,8 +12,8 @@ $fontloaderjs = $this->params->get('fontloaderjs');
 // generator tag
 $this->setGenerator(null);
 
-// Add JavaScript Frameworks
-JHtml::_('bootstrap.framework');
+// add jquery framework
+JHtml::_('jquery.framework');
 
 // Add Stylesheets
 $doc->addStyleSheet($tpath . '/css/j-template.css');
@@ -45,12 +45,14 @@ $doc->addStyleSheet($tpath . '/css/print.css');
 
 <body class="contentpane" id="print">
 
-<div id="overall">
+<div class="overall">
     <jdoc:include type="message"/>
     <jdoc:include type="component"/>
 </div>
+<div class="copy-footer">
+    <p><?php echo htmlspecialchars($app->getCfg('sitename')); ?> | 2015 | &copy; | alle Rechte vorbehalten</p>
+</div>
 
-<p><?php echo htmlspecialchars($app->getCfg('sitename')); ?> | 2015 | &copy; | alle Rechte vorbehalten</p>
 
 </body>
 

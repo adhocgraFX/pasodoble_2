@@ -233,7 +233,28 @@ p.counter {
 	padding: 1.25em 0;
 }
 
+// component print
+#print {
+	.overall {
+		margin: 0 auto;
+		padding: 0 1em;
+		max-width: 50em;
+	}
 
+	article {
+		a span::before {
+			padding-right: .5em;
+		}
+	}
+
+	.copy-footer {
+		padding-top: .5em;
+		background: @whitesmoke-light;
+		p {
+			text-align: center
+		}
+	}
+}
 
 // items general + blog stuff
 

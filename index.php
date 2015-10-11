@@ -267,8 +267,12 @@ endif; ?>
 <jdoc:include type="modules" name="debug"/>
 
 <!-- load plugin scripts -->
-<script type="text/javascript" src="<?php echo $tpath . '/js/template.js.php?u='.$unset.'v=1'; ?>"></script>
 
+<?php if ($unset==1): ?>
+    <script type="text/javascript" src="<?php echo $tpath . '/js/template.js.php?u='.$unset.'v=1'; ?>"></script>
+<?php else: ?>
+    <script type="text/javascript" src="<?php echo $tpath . '/js/template-dist.js'; ?>"></script>
+<?php endif; ?>
 <!-- load plugin options -->
 <?php include_once('js/plugin.js.php'); ?>
 

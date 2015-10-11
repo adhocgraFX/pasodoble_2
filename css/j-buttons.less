@@ -68,19 +68,36 @@ input[type="submit"] {
 
 
 // button colors and  - backgrounds
-// default - concrete
+// default - gainsboro
 button, .btn {
-    color: @concrete-darker;
-    background: @clouds-dark;
+    color: @gray;
+    background: @gainsboro-light;
     &:hover,
     &:focus {
-        color: @whitesmoke;
-        background: @concrete;
+        color: @gray;
+        background: @gainsboro-lighter;
     }
     &.active,
     &:active {
-        color: @whitesmoke;
-        background: @concrete-dark;
+        color: @gray;
+        background: @gainsboro-dark;
+    }
+}
+
+// default light gray
+.button-default, .btn-default {
+
+    color: @gray;
+    background: @whitesmoke;
+    &:hover,
+    &:focus {
+        color: @gray;
+        background: @whitesmoke-light;
+    }
+    &.active,
+    &:active {
+        color: @gray;
+        background: @whitesmoke-dark;
     }
 }
 
@@ -116,31 +133,14 @@ button, .btn {
     }
 }
 
-// default light gray
-.button-default, .btn-default {
-
-    color: @gray;
-    background: @gainsboro-light;
-    &:hover,
-    &:focus {
-        color: @gray;
-        background: @gainsboro;
-    }
-    &.active,
-    &:active {
-        color: @gray;
-        background: @gainsboro-dark;
-    }
-}
-
 // light > gold
 .button-light, .btn-light {
     color: @gray;
-    background: @gold-lighter;
+    background: @gold-light;
     &:hover,
     &:focus {
         color: @gray;
-        background: @gold-light;
+        background: @gold-lighter;
     }
     &.active,
     &:active {
