@@ -1,4 +1,6 @@
 <?php
+// parameter
+$unset = $_GET['u'];
 
 // required header info and character set
 header("Content-type: application/x-javascript");
@@ -12,12 +14,11 @@ $ExpStr = "Expires: " . gmdate("D, d M Y H:i:s",time() + $offset) . " GMT";
 header($ExpStr);
 
 // load scripts
-// require('../../../media/jui/js/jquery.min.js');
-// require('../../../media/jui/js/jquery-noconflict.js');
-// require('../../../media/jui/js/jquery-migrate.min.js');
-// require('../../../media/system/js/caption.js');
-// require('../../../media/jui/js/bootstrap.min.js');
-// require('../../../media/system/js/html5fallback.js');
+if ($unset==1) require('../../../media/jui/js/jquery.min.js');
+if ($unset==1) require('../../../media/jui/js/jquery-noconflict.js');
+if ($unset==1) require('../../../media/jui/js/jquery-migrate.min.js');
+if ($unset==1) require('../../../media/system/js/caption.js');
+if ($unset==1) require('../../../media/system/js/html5fallback.js');
 
 // textresizer
 require('jquery.cookie.min.js');

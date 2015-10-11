@@ -183,6 +183,16 @@
                        size="10" >
                 </field>
 
+                <field name="unset"
+                       type="radio"
+                       default="0"
+                       label="Unset javascript"
+                       description="Unset all Joomla! javascripts and add them combined and compressed just before closing body tag"
+                       class="btn-group btn-group-yesno" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
                 <field name="Main and Aside Widths / Flex Ratio"
                        type="spacer"
                        hr="false" >

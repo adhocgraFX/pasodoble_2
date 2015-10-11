@@ -39,24 +39,22 @@ $headerbackground = $this->params->get('headerbackground');
 
 $buttontext = $this->params->get('buttontext');
 $buttonlink = $this->params->get('buttonlink');
+$unset = $this->params->get('unset');
 
 // generator tag
 $this->setGenerator(null);
 
-// Add Joomla! JavaScript Framework
-// JHtml::_('bootstrap.framework');
-
+if ($unset==1) :
 // unset javascript file from head
-// unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery.min.js']);
-// unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-noconflict.js']);
-// unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-migrate.min.js']);
-// unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
-// unset($doc->_scripts[$this->baseurl.'/media/jui/js/bootstrap.min.js']);
-// unset($doc->_scripts[$this->baseurl.'/media/system/js/html5fallback.js']);
-
-// add jquery framework
-JHtml::_('jquery.framework');
-
+    unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery.min.js']);
+    unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-noconflict.js']);
+    unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-migrate.min.js']);
+    unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
+    unset($doc->_scripts[$this->baseurl.'/media/system/js/html5fallback.js']);
+else:
+    // add jquery framework
+    JHtml::_('jquery.framework');
+endif;
 ?>
 
 <!-- font loader css code: google or brick fonts -->
@@ -269,7 +267,7 @@ endif; ?>
 <jdoc:include type="modules" name="debug"/>
 
 <!-- load plugin scripts -->
-<script type="text/javascript" src="<?php echo $tpath . '/js/template.js.php'; ?>"></script>
+<script type="text/javascript" src="<?php echo $tpath . '/js/template.js.php?u='.$unset.'v=1'; ?>"></script>
 
 <!-- load plugin options -->
 <?php include_once('js/plugin.js.php'); ?>

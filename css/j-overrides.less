@@ -44,10 +44,10 @@ dl.search-results {
 .star {
 	font-weight: normal;
 	font-size: 1em;
-	color: @grayLight;
+	color: @gray-light;
 
 	.red {
-		color: @red;
+		color: @colorRedA400;
 	}
 }
 
@@ -71,6 +71,8 @@ dl.article-info {
 		text-shadow: 0 0 0 rgba(0, 0, 0, 0);
 		border: 0 !important;
 		.box-shadow(none);
+		.border-radius(@baseBorderRadius);
+		margin-right: .2em;
 
 		&:hover {
 			color: @whitesmoke;
@@ -157,17 +159,24 @@ a.flat {
 	}
 }
 
-// bootstrap pager und pagenav overrides
+// pager und pagenav overrides
 
-/* div.pager {
-	margin:.5em 0;
-	padding: 0;
-} */
-
-ul.pager, .pager ul {
+ul.pager {
 	margin:.5em 0;
 	padding: 0;
     font-size: 0.875em;
+
+	li {
+		list-style-type: none;
+
+		&.previous {
+			float: left;
+		}
+
+		&.next {
+			float: right;
+		}
+	}
 
 	li a {
         display: inline-block;
@@ -442,7 +451,7 @@ div.current {
 
 	h3.title {
 		font-size: .875em !important;
-		font-family: @baseFontFamily;
+		font-family: @body-font;
 		margin-bottom: .25em;
 	}
 
@@ -455,7 +464,7 @@ div.current {
 		color: @concrete-darker;
 		background: @clouds-dark;
 		.border-radius(@baseBorderRadius);
-		border: 1px solid @grayLight;
+		border: 1px solid @gray-light;
 	}
 
 	.pane-toggler a:hover, .pane-toggler a:focus, .pane-toggler-down a:hover, .pane-toggler-down a:focus {
@@ -473,7 +482,7 @@ div.current {
 		text-decoration: none !important;
 		color: @whitesmoke;
 		background: @concrete-dark;
-		border: solid 1px @grayLight;
+		border: solid 1px @gray-light;
 		.border-radius(@baseBorderRadius);
 	}
 
