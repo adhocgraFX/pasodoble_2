@@ -45,14 +45,14 @@ $doc->addStyleSheet($tpath . '/css/print.css');
 
 <body class="contentpane" id="print">
 
-<div class="overall">
-    <jdoc:include type="message"/>
-    <jdoc:include type="component"/>
-</div>
-<div class="copy-footer">
-    <p><?php echo htmlspecialchars($app->getCfg('sitename')); ?> | 2015 | &copy; | alle Rechte vorbehalten</p>
-</div>
+    <div class="overall">
+        <jdoc:include type="message"/>
+        <jdoc:include type="component"/>
+    </div>
 
+    <footer>
+        <p><?php echo htmlspecialchars($app->getCfg('sitename')); ?> | 2015 | &copy; | alle Rechte vorbehalten</p>
+    </footer>
 
 </body>
 
