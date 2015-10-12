@@ -30,11 +30,13 @@
 	
 	<files>
 		<folder>css</folder>
+        <folder>dist</folder>
         <folder>fonts</folder>
         <folder>html</folder>
 		<folder>images</folder>
 		<folder>js</folder>
         <folder>languages</folder>
+        <folder>less</folder>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
 		<filename>favicon.ico</filename>

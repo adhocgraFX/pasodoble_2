@@ -9,7 +9,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // load sheets and scripts
-$doc->addStyleSheet($tpath.'/css/offline.css?v=1'); 
+$doc->addStyleSheet($tpath.'/dist/style.css');
 
 ?><!doctype html>
 
@@ -17,7 +17,7 @@ $doc->addStyleSheet($tpath.'/css/offline.css?v=1');
 
 <head>
   <jdoc:include type="head" />
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> <!-- mobile viewport optimized -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>

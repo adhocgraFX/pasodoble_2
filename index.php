@@ -74,10 +74,11 @@ endif;
 
 <!-- template css oder anderes css -->
 <?php if ($view == "form" or $layout == "edit"):
-    $doc->addStyleSheet($tpath . '/css/j-template.css');
+    // $doc->addStyleSheet($tpath . '/css/j-template.css');
+    $doc->addStyleSheet($tpath . '/dist/style.css');
 else:
-    // template css
-    $doc->addStyleSheet($tpath . '/css/j-template.css');
+    // $doc->addStyleSheet($tpath . '/css/j-template.css');
+    $doc->addStyleSheet($tpath . '/dist/style.css');
 endif; ?>
 
 <!doctype html>
@@ -114,6 +115,9 @@ endif; ?>
                 }
             });</script>
 
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
     <!-- Web Application Manifest -->
     <link rel="manifest" href="manifest.json">
 
@@ -134,10 +138,9 @@ endif; ?>
 
     <meta name="theme-color" content="#3372DF">
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page
+    https://developers.google.com/webmasters/smartphone-sites/feature-phones
+    <link rel="canonical" href="http://www.example.com/"> -->
 
     <!-- humans text -->
     <link rel="author" href="humans.txt" />
@@ -267,7 +270,11 @@ endif; ?>
 <jdoc:include type="modules" name="debug"/>
 
 <!-- load plugin scripts -->
-<script type="text/javascript" src="<?php echo $tpath . '/js/template.js.php?u='.$unset.'v=1'; ?>"></script>
+<?php if ($unset==1): ?>
+    <script type="text/javascript" src="<?php echo $tpath . '/js/template.js.php?u='.$unset.'v=1'; ?>"></script>
+<?php else: ?>
+    <script type="text/javascript" src="<?php echo $tpath . '/dist/app.js'; ?>"></script>
+<?php endif; ?>
 
 <!-- load plugin options -->
 <?php include_once('js/plugin.js.php'); ?>
