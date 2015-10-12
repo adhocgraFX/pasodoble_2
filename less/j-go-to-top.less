@@ -4,6 +4,13 @@
 	text-decoration: none;
 	color: @smoke !important;
 	background: @color-accent;
+
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0;
+    *border: 0; // Remove the border to prevent IE7's black border on input:focus
+
     .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
 
 	opacity: 0.90;
@@ -21,7 +28,7 @@
 
 	&:active {
 		background: darken(@color-accent, 10%);
-		.box-shadows(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+        .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
 	}
 
     span {

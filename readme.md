@@ -25,4 +25,4 @@ PasoDoble-2
 ###Work in progress!
 
 #### todos:
-* der heilige Gral - die Suche geht weiter :)
+* der heilige Gral - die Suche geht weiter - gulpfile für js und less :)
