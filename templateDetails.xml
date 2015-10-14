@@ -41,9 +41,9 @@
 		<filename>error.php</filename>
 		<filename>favicon.ico</filename>
         <filename>humans.txt</filename>
-        <filename>index.php</filename>
+        <!-- <filename>index.php</filename> -->
         <filename>manifest.json</filename>
-        <filename>manifest.webapp</filename>
+        <!-- <filename>manifest.webapp</filename> -->
 		<filename>offline.php</filename>
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>

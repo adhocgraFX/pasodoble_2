@@ -142,8 +142,8 @@ endif; ?>
     https://developers.google.com/webmasters/smartphone-sites/feature-phones
     <link rel="canonical" href="http://www.example.com/"> -->
 
-    <!-- humans text -->
-    <link rel="author" href="humans.txt" />
+    <!-- humans text
+    <link rel="author" href="humans.txt" /> -->
 
     <!-- load css options -->
     <?php include_once('css/j-template.css.php'); ?>
@@ -187,7 +187,7 @@ endif; ?>
     </section>
     <?php if (($buttontext) and ($buttonlink) and ($action=="front")): ?>
         <section class="app-bar-call-to-action hide-on-tablet">
-            <a href="<?php echo $this->baseurl ?>/<?php echo ($buttonlink); ?>" class="call-to-action btn btn-accent"><?php echo htmlspecialchars($buttontext); ?> <span class="icon-arrow-forward"></span></a>
+            <a href="<?php echo $this->baseurl ?>/<?php echo ($buttonlink); ?>" class="call-to-action btn btn-accent btn-large"><?php echo htmlspecialchars($buttontext); ?> <span class="icon-arrow-forward"></span></a>
         </section>
     <?php endif; ?>
     <?php if (($headerbackground) and ($pageclass=="header-img")): ?>
@@ -274,6 +274,7 @@ endif; ?>
     <script type="text/javascript" src="<?php echo $tpath . '/js/template.js.php?u='.$unset.'v=1'; ?>"></script>
 <?php else: ?>
     <script type="text/javascript" src="<?php echo $tpath . '/dist/app.js'; ?>"></script>
+    <!-- <script type="text/javascript" src="<?php echo $tpath . '/js/template-dist.js'; ?>"></script> -->
 <?php endif; ?>
 
 <!-- load plugin options -->
