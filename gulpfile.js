@@ -76,7 +76,7 @@ gulp.task('print', function () {
 gulp.task('watch', function(){
     // TEMPLATE FILES
     gulp.watch('js/**/*.js',['script']);
-    gulp.watch('less/**/*.css',['style', 'print']);
+    gulp.watch('less/**/*.less',['style', 'print']);
 });
 
 
