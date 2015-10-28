@@ -53,7 +53,7 @@ gulp.task('style', function () {
         .pipe(autoprefix('last 10 versions', 'ie 9', 'ie 8'))
         .pipe(minifyCSS())
         .pipe(concat('style.css'))
-        .pipe(sourcemaps.write('maps'))
+        .pipe(sourcemaps.write('map'))
         .pipe(gulp.dest('dist'))
         .pipe(notify({message:'style.css erfolgreich destilliert, hicks'}));
 });
