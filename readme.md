@@ -28,7 +28,8 @@ PasoDoble-2
 * der heilige Gral - die Suche geht weiter - gulpfile für js und less :)
 * Hybrid Lösung: 
     * Gulp für js und less eingerichtet, style.css und app.js in dist folder
+    * css sourcemap via gulp in map folder
     * prepros less compilation (j-template.css) in css folder und js compilation (template-dist.js) in js folder
     * unset über options steuerbar; dann wird template.js.php anstelle app.js geladen 
-* source maps via gulp noch nicht optimal (die prepros source map ist genauer)
+    
     
