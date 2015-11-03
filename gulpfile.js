@@ -1,6 +1,6 @@
-// VARIABLES
 // Include gulp
 var gulp = require('gulp');
+
 // Include our plugins
 var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
@@ -10,6 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefix = require('gulp-autoprefixer');
 var convertEncoding = require('gulp-convert-encoding');
 var notify = require('gulp-notify');
+var livereload = require('gulp-livereload');
 
 
 // hello world
@@ -32,7 +33,7 @@ gulp.task('script', function () {
         'js/lightbox.js',
         // flickity by dessandro
         'js/flickity.pkgd.min.js',
-        // doubletaptogo > hover lösung für drop downs
+        // doubletaptogo > hover lï¿½sung fï¿½r drop downs
         'js/doubletaptogo.min.js'
     ])
         .pipe(uglify())
@@ -74,9 +75,12 @@ gulp.task('print', function () {
 
 // WATCH
 gulp.task('watch', function(){
+    // chrome > livereload plugin required
+    livereload.listen();
+
     // TEMPLATE FILES
-    gulp.watch('js/**/*.js',['script']);
-    gulp.watch('less/**/*.less',['style', 'print']);
+    gulp.watch('js/**/*.js',['script']).on('change', livereload.changed);
+    gulp.watch('less/**/*.less',['style', 'print']).on('change', livereload.changed);
 });
 
 
