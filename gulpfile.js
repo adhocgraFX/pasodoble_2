@@ -33,7 +33,7 @@ gulp.task('script', function () {
         'js/lightbox.js',
         // flickity by dessandro
         'js/flickity.pkgd.min.js',
-        // doubletaptogo > hover l�sung f�r drop downs
+        // doubletaptogo > hover lösung für drop downs
         'js/doubletaptogo.min.js'
     ])
         .pipe(uglify())
@@ -84,9 +84,9 @@ gulp.task('watch', function(){
 });
 
 
-// TEMPLATE FILES
-gulp.task('magic', ['script', 'style', 'print']);
-
-
 // DEFAULT TASK
-gulp.task('default', ['script', 'style', 'print', 'watch']);
+gulp.task('default', ['script', 'style', 'print']);
+
+
+// DEFAULT + WATCH
+gulp.task('all', ['script', 'style', 'print', 'watch']);
