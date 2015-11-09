@@ -7,9 +7,13 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/../../includes" />
+          <root url="file://$MODULE_DIR$/../../libraries" />
           <root url="file://$MODULE_DIR$/../../../../php/pear" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/../../includes" />
+          <root url="file://$MODULE_DIR$/../../libraries" />
           <root url="file://$MODULE_DIR$/../../../../php/pear" />
         </SOURCES>
       </library>

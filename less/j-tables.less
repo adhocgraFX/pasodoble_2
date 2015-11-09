@@ -1,97 +1,131 @@
-// Tables mostly inspired by Dirk Jesse
-// TODO css besser strkturieren
-
 table {
+	color: @gray-dark;
+	background: @white;
+	margin: @paragraph-val 0;
 	width: 100%;
 	border-collapse: collapse;
-	margin: @paragraph-val 0;
-	color: @gray-dark;
 	border-top: 1px @gainsboro-darker solid;
 	border-bottom: 1px @gainsboro-darker solid;
-	background: @white;
 
 	caption {
 		font-size: 87.5%;
-		color: @colorIndigoA700;
-		margin-left: .5em;
+		font-style: italic;
+		color: @gray-dark;
+		padding: .5em;
+	}
+
+	thead {
+		tr {
+			th {
+				text-align: left;
+				vertical-align: middle;
+				padding: .5em;
+				font-weight: bold;
+				color: @gray-light;
+				border-top: 1px solid @gainsboro-darker;
+				border-bottom: 3px @gainsboro-darker solid;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&.nowrap {
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			// highlight row on mouse over
+			&:hover td {
+				background: @whitesmoke-dark;
+			}
+
+			td {
+				text-align: left;
+				vertical-align: top;
+				padding: .5em;
+				border-top: 1px solid @gainsboro-darker;
+
+				span.badge {
+					font-weight: normal;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&.nowrap {
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+
+	tfoot {
+
+		tr {
+			td {
+				font-size: 87.5%;
+				color: @gray;
+				padding: .5em;
+				text-align: left;
+				font-style: italic;
+				border-top: 1px solid @gainsboro-darker;
+
+				span.badge {
+					font-weight: normal;
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&.nowrap {
+					white-space: nowrap;
+				}
+			}
+		}
 	}
 
 	&.table-bordered {
 		border: 1px @gainsboro-darker solid;
-	}
-}
 
-th, td {
-	line-height: 1.4em;
-	vertical-align: top;
-	padding: 0.6em 0.5em;
+		caption {
 
-	&:first-child {
-		margin-top: 0;
-	}
+		}
 
-	&.nowrap {
-		white-space: nowrap;
-	}
-}
-
-thead th, tfoot th, tbody th {
-    font-weight: normal;
-    text-align: left;
-	color: @gray-light;
-	border-bottom: 1px @gainsboro-darker solid;
-}
-
-thead th {
-	border-bottom: 3px @gainsboro-darker solid;
-}
-
-tbody, tfoot {
-
-	th {
-		text-align: left;
-		border-top: 1px solid @gainsboro-darker;
-	}
-
-	td {
-		text-align: left;
-		border-top: 1px solid @gainsboro-darker;
-
-        span.badge {
-            font-weight: normal;
-        }
-	}
-
-	// highlight row on mouse over
-	tr:hover th, tr:hover td {
-		background: @clouds-dark;
-		background: rgba(0, 0, 0, .025);
-	}
-}
-
-.table-bordered {
-
-	thead th {
-		background: @clouds;
-		border-right: 1px @gainsboro-darker solid;
-	}
-
-	tbody {
-
-		th {
-			&[scope="row"] {
-				background: @whitesmoke;
+		thead {
+			th {
+				font-weight: normal;
+				color: @gray-dark;
+				background: @whitesmoke-dark;
+				border-right: 1px @gainsboro-darker solid;
 			}
-
-			border-right: 1px solid @gainsboro-darker
 		}
 
-		tr:nth-child(2n+2) {
-			background: @whitesmoke;
+		tbody {
+			tr {
+				&:nth-child(2n+2) {
+					background: @whitesmoke;
+				}
+
+				td {
+					border-right: 1px solid @gainsboro-darker;
+
+					&[scope="row"] {
+						background: @whitesmoke;
+					}
+				}
+			}
 		}
 
-		td {
-			border-right: 1px solid @gainsboro-darker;
+		tfoot {
+			td {
+				border-right: 1px solid @gainsboro-darker;
+			}
 		}
 	}
 }

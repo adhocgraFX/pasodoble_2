@@ -195,6 +195,13 @@
                     <option value="0">JNO</option>
                 </field>
 
+                <field name="addcss" type="textarea"
+                       label="Additional CSS"
+                       description="Add personal CSS rules"
+                       cols="30"
+                       rows="4" >
+                </field>
+
                 <field name="Main and Aside Widths / Flex Ratio"
                        type="spacer"
                        hr="false" >

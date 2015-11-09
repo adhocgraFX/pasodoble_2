@@ -21,20 +21,20 @@ $doc->addStyleSheet($tpath . '/dist/print.css');
 
 <head>
 
-    <jdoc:include type="head"/>
+	<jdoc:include type="head"/>
 
 </head>
 
 <body class="contentpane" id="print">
 
-    <div class="overall">
-        <jdoc:include type="message"/>
-        <jdoc:include type="component"/>
-    </div>
+<div class="overall">
+	<jdoc:include type="message"/>
+	<jdoc:include type="component"/>
+</div>
 
-    <footer>
-        <p><?php echo htmlspecialchars($app->getCfg('sitename')); ?> | 2015 | &copy; | alle Rechte vorbehalten</p>
-    </footer>
+<footer>
+	<p><?php echo htmlspecialchars($app->getCfg('sitename')); ?> | 2015 | &copy; | alle Rechte vorbehalten</p>
+</footer>
 
 </body>
 

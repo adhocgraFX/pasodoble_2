@@ -19,6 +19,7 @@ $basefontsize = $this->params->get('basefontsize');
 $textindent = $this->params->get('textindent');
 $textresizer = $this->params->get('textresizer');
 $buttontext = $this->params->get('buttontext');
+$addcss = $this->params->get('addcss');
 ?>
 
 <style type="text/css">
@@ -66,6 +67,11 @@ $buttontext = $this->params->get('buttontext');
             text-indent: 0 !important;
             margin: 1em 0 !important;
         }
+
+		table p + p {
+			text-indent: 0 !important;
+		}
+
     <?php endif; ?>
 
     <?php if (($textresizer == 1) or ($this->countModules('search'))): ?>
@@ -196,5 +202,9 @@ $buttontext = $this->params->get('buttontext');
             min-width: <?php echo $minmodulewidth;?>em;
         }
     }
+
+	<?php if (trim($addcss) != ''): ?>
+		<?php echo htmlspecialchars($addcss);?>
+	<?php endif; ?>
 
 </style>
