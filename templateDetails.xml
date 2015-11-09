@@ -40,8 +40,8 @@
 		<filename>component.php</filename>
 		<filename>error.php</filename>
 		<filename>favicon.ico</filename>
-        <filename>humans.txt</filename>
-        <!-- <filename>index.php</filename> -->
+        <!-- <filename>humans.txt</filename> -->
+        <filename>index.php</filename>
         <filename>manifest.json</filename>
         <!-- <filename>manifest.webapp</filename> -->
 		<filename>offline.php</filename>
