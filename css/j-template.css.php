@@ -58,9 +58,9 @@ $addcss = $this->params->get('addcss');
             text-indent: 0 !important;
             margin-top: .75em !important;
         }
-        article p.readmore a {
-            margin: 0 !important;
 
+		article p.readmore a {
+            margin: 0 !important;
         }
 
         article p.alert, article p.box {
@@ -70,6 +70,7 @@ $addcss = $this->params->get('addcss');
 
 		table p + p {
 			text-indent: 0 !important;
+            margin-top: .75em !important;
 		}
 
     <?php endif; ?>
