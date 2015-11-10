@@ -129,3 +129,29 @@ table {
 		}
 	}
 }
+
+// scrollbare tabellen im responsive web design
+.table-scrollable {
+	width: 100%;
+	overflow-y: auto;
+	margin: 0 0 @paragraph-val 0;
+
+	table {
+		td, th {
+			// todo hilfslösung
+			min-width: 9em;
+		}
+	}
+
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 14px;
+		height: 14px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		border: 3px solid #fff;
+		background-color: rgba(0, 0, 0, .3);
+	}
+}
