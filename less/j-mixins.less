@@ -96,7 +96,7 @@
 		}
 		&:before {
 			content: ": ";
-			// margin-left: -0.2rem; // removes extra space between the dt and the colon
+			margin-left: -0.2rem; // removes extra space between the dt and the colon
 			margin-right: 0.25rem;
 		}
 	}
@@ -229,4 +229,41 @@
 .border-left-radius(@radius) {
     .border-top-left-radius(@radius);
     .border-bottom-left-radius(@radius);
+}
+
+// heading scale mixin
+// type scale base = 1em
+// type scale ratio = default, medium, large => variables
+
+.typo-scale (@ratio: 1.2) {
+	h1 {
+		font-size: ((((@type-scale-base-value * @ratio) * @ratio) * @ratio) * @ratio);
+		&.subheading, small {
+			font-size: (((((@type-scale-base-value * @ratio) * @ratio) * @ratio) * @ratio) * .875);
+		}
+	}
+	h2 {
+		font-size: (((@type-scale-base-value * @ratio) * @ratio) * @ratio) ;
+		&.subheading, small {
+			font-size: ((((@type-scale-base-value * @ratio) * @ratio) * @ratio) * .875);
+		}
+	}
+	h3 {
+		font-size: ((@type-scale-base-value * @ratio) * @ratio);
+		&.subheading, small {
+			font-size: (((@type-scale-base-value * @ratio) * @ratio) * .875);
+		}
+	}
+	h4 {
+		font-size: (@type-scale-base-value * @ratio);
+		&.subheading, small {
+			font-size: ((@type-scale-base-value * @ratio) * .875);
+		}
+	}
+	h5, h6 {
+		font-size: @type-scale-base-value;
+		&.subheading, small {
+			font-size: @type-scale-base-value;
+		}
+	}
 }

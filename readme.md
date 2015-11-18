@@ -1,6 +1,4 @@
-PasoDoble-2
-=================
-
+#PasoDoble-2
 ## responsive Joomla! 3.4x template
 
 * less 
@@ -22,8 +20,35 @@ PasoDoble-2
 ###PasoDoble in action
 [pasodoble](http://pasodoble.adhocgrafx.de "PasoDoble")
 
-###Work in progress!
+### Npm und gulp installieren:
+Nodejs: [Node](http://nodejs.org/). 
+Gulp: [Gulp](http://gulpjs.com/). 
 
+1. Node installieren
+2. Terminal / Ide mit Terminal - als Administrator ausführen - wichtig!
+3. Gulp global installieren: 
+	
+		npm install -g gulp
+
+4. Node dependencies installieren (package.json):
+
+		npm install
+    
+5. Alternative: Package.json selber aufbauen:
+
+		npm init
+		npm install gulp --save-dev
+		npm install gulp-autoprefixer gulp-concat gulp-convert-encoding gulp-less gulp-livereload gulp-minify-css gulp-notify gulp-sourcemaps gulp-uglify --save-dev
+
+####Gulp Befehle:
+		gulp all: script, style, print, watch		
+		gulp (default): script, style, print	
+		gulp script: app.js	
+		gulp style: style.css	
+		gulp print: print css	
+		gulp watch
+
+###Work in progress!
 #### todos:
 * der heilige Gral - die Suche geht weiter - gulpfile für js und less :)
 * Hybrid Lösung: 

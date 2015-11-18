@@ -44,52 +44,24 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1 {
-	font-size: 2em;
-    &.subheading, small {
-        font-size: 2em * .9;
-    }
-}
-
-h2 {
-	font-size: 1.6666em;
-    &.subheading, small {
-        font-size: 1.6666em * .9;
-    }
-}
-
-h3 {
-	font-size: 1.5em;
-    &.subheading, small {
-        font-size: 1.5em * .9;
-    }
-}
-
-h4 {
-	font-size: 1.3333em;
-    &.subheading, small {
-        font-size: 1.3333em * .9;
-    }
-}
-
-h5 {
-	font-size: 1.1667em;
-	&.subheading, small {
-		font-size: 1em;
-	}
-}
-
-h6 {
-	font-size: 1em;
-	&.subheading, small {
-		font-size: 1em;
-	}
-}
+// heading scale
+.typo-scale (@ratio-default);
 
 article {
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4 {
 		font-weight: @book !important;
-		color: @color-heading !important;
+		color: @color-heading  !important;
+	}
+
+	h5 {
+		font-weight: @bold !important;
+		color: @color-heading  !important;
+	}
+
+	h6 {
+		font-weight: @medium !important;
+		font-style: italic;
+		color: @color-subheading !important;
 	}
 }
 
@@ -253,8 +225,8 @@ acronym, abbr {
 }
 
 mark {
-	background: yellow;
-	color: midnightblue;
+	background: LemonChiffon;
+	color: DimGray;
 }
 
 //	definition lists allgemein
@@ -262,8 +234,9 @@ dl {
 	margin-bottom: 1em;
 	color: @gray;
 
-	dt {
+	dt, dd:before {
 		font-weight: @medium;
+		font-style: normal;
 		color: @gray-light;
 	}
 
@@ -448,7 +421,7 @@ article {
 }
 
 // media queries
-// Relative breakpoints: 48em; 80em; TODO dikutieren 48 x 16 = 768
+// Relative breakpoints: 47em oder 48em; 80em; TODO 48 x 16 = 768 oder 47em
 
 @media screen and (min-width: 47em) {
 	body {
@@ -456,44 +429,8 @@ article {
 		line-height: @line-height-medium;
 	}
 
-	h1 {
-		font-size: 3em;
-		&.subheading {
-			font-size: 3em * .9;
-		}
-	}
-
-	h2 {
-		font-size: 2.25em;
-		&.subheading {
-			font-size: 2.25em * .9;
-		}
-	}
-
-	h3 {
-		font-size: 1.5em;
-		&.subheading {
-			font-size: 1.5em * .9;
-		}
-	}
-
-	h4 {
-		font-size: 1.3125em;
-		&.subheading {
-			font-size: 1.3125em * .9;
-		}
-	}
-
-	h5 {
-		font-size: 1.125em;
-		&.subheading {
-			font-size: 1em;
-		}
-	}
-
-	h6 {
-		font-size: 1em;
-	}
+	// heading scale
+	.typo-scale (@ratio-medium);
 
 	// paragraph styles plus helper classes
 	p {
@@ -517,44 +454,8 @@ article {
 		line-height: @line-height-large;
 	}
 
-	h1 {
-		font-size: 3.4231em;
-		&.subheading {
-			font-size: 3.4231em * .9;
-		}
-	}
-
-	h2 {
-		font-size: 2.6154em;
-		&.subheading {
-			font-size: 2.6154em * .9;
-		}
-	}
-
-	h3 {
-		font-size: 2.1154em;
-		&.subheading {
-			font-size: 2.1154em * .9;
-		}
-	}
-
-	h4 {
-		font-size: 1.6154em;
-		&.subheading {
-			font-size: 1.6154em * .9;
-		}
-	}
-
-	h5 {
-		font-size: 1.3077em;
-		&.subheading {
-			font-size: 1.3077em * .9;
-		}
-	}
-
-	h6 {
-		font-size: 1em;
-	}
+	// heading scale
+	.typo-scale (@ratio-large);
 
 	// paragraph styles plus helper classes
 	p {
