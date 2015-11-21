@@ -20,10 +20,11 @@
 ###PasoDoble in action
 [pasodoble](http://pasodoble.adhocgrafx.de "PasoDoble")
 
-### Npm und gulp installieren:
-Nodejs: [Node](http://nodejs.org/). 
-Gulp: [Gulp](http://gulpjs.com/). 
+### Npm und gulp:
+1. Node js, Info siehe: [Node](http://nodejs.org/)
+2. Gulp, Info siehe: [Gulp](http://gulpjs.com/)
 
+####Installation:
 1. Node installieren
 2. Terminal / Ide mit Terminal - als Administrator ausführen - wichtig!
 3. Gulp global installieren: 
@@ -34,13 +35,12 @@ Gulp: [Gulp](http://gulpjs.com/).
 
 		npm install
     
-5. Alternative: Package.json selber aufbauen:
-
-		npm init
+####Alternativ package.json selber aufbauen:
+    	npm init
 		npm install gulp --save-dev
 		npm install gulp-autoprefixer gulp-concat gulp-convert-encoding gulp-less gulp-livereload gulp-minify-css gulp-notify gulp-sourcemaps gulp-uglify --save-dev
 
-####Gulp Befehle:
+####Workflow, Gulp Befehle:
 		gulp all: script, style, print, watch		
 		gulp (default): script, style, print	
 		gulp script: app.js	
