@@ -19,8 +19,10 @@
 			<li>breadcrumbs</li>
 			<li>slideshow</li>
 			<li>top_row</li>
+			<li>inner_top_row</li>
 			<li>left_bar</li>
 			<li>sidebar</li>
+			<li>inner_bottom_row</li>
 			<li>bottom_row</li>
 			<li>footer</li>
 			<li>debug</li>
@@ -59,6 +61,8 @@
         <position>sidebar</position>
         <position>top_row</position>
 		<position>bottom_row</position>
+        <position>inner_top_row</position>
+        <position>inner_bottom_row</position>
 		<position>footer</position>
 		<position>debug</position>
 	</positions>

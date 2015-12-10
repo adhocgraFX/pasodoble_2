@@ -111,13 +111,20 @@ $addcss = $this->params->get('addcss');
     footer .module {
         max-width: <?php echo $rowmodulewidth;?>em;
         min-width: <?php echo $minrowmodulewidth;?>em;
-
     }
     section.top .module {
         max-width: <?php echo $rowmodulewidth;?>em;
         min-width: <?php echo $minrowmodulewidth;?>em;
     }
     section.bottom .module {
+        max-width: <?php echo $rowmodulewidth;?>em;
+        min-width: <?php echo $minrowmodulewidth;?>em;
+    }
+    section.inner-top .module {
+        max-width: <?php echo $rowmodulewidth;?>em;
+        min-width: <?php echo $minrowmodulewidth;?>em;
+    }
+    section.inner-bottom .module {
         max-width: <?php echo $rowmodulewidth;?>em;
         min-width: <?php echo $minrowmodulewidth;?>em;
     }

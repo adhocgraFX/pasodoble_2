@@ -749,6 +749,38 @@ ul.lang-inline {
 
     }
 }
+
 table {
     font-size: 0.875em;
+}
+
+// tags bootstrap list striped
+ul.list-striped {
+	list-style-type: none;
+	margin: .5em 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+		padding: .5em;
+		margin: .5em 0;
+		background: @smoke;
+		display: block;
+		font-size: .875em;
+		border: 1px solid @concrete;
+		.box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+
+		a {
+			text-transform: uppercase; // je nach geschmack
+		}
+
+		a:hover, a:active {
+			background: transparent !important;
+			text-decoration: underline !important;
+		}
+
+		h3, h4 {
+			font-size: 1.125em;
+		}
+	}
 }

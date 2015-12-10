@@ -262,10 +262,20 @@ endif; ?>
 			</aside>
 		<?php endif; ?>
 		<main role="main">
+			<?php if ($this->countModules('inner_top_row')): ?>
+				<section class="inner-top" role="complementary">
+					<jdoc:include type="modules" name="inner_top_row" style="jduo"/>
+				</section>
+			<?php endif; ?>
 			<section class="content">
 				<jdoc:include type="message"/>
 				<jdoc:include type="component"/>
 			</section>
+			<?php if ($this->countModules('inner_bottom_row')): ?>
+				<section class="inner-bottom" role="complementary">
+					<jdoc:include type="modules" name="inner_bottom_row" style="jduo"/>
+				</section>
+			<?php endif; ?>
 		</main>
 		<?php if ($this->countModules('sidebar')): ?>
 			<aside class="sidebar-container" role="complementary">

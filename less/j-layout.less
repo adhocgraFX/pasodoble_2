@@ -120,6 +120,15 @@ section.bottom {
     background: @color-bottom-row-back;
 }
 
+section.inner-top {
+    background: @smoke;
+    margin-top: -.5em;
+}
+
+section.inner-bottom {
+    background: @smoke;
+}
+
 main,
 aside,
 section.top,
@@ -132,7 +141,9 @@ section.main-container
 
 footer,
 section.top,
-section.bottom {
+section.bottom,
+section.inner-top,
+section.inner-bottom {
     .flex-display;
 	.flex-flow(row wrap);
     .justify-content(center);
