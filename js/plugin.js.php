@@ -47,6 +47,8 @@ $pageclass = $params->get('pageclass_sfx');
      *  See the License for the specific language governing permissions and
      *  limitations under the License */
 
+    // nav
+    <?php if ($this->countModules('nav')): ?>
     (function () {
         'use strict';
 
@@ -85,6 +87,7 @@ $pageclass = $params->get('pageclass_sfx');
         //    }
         // });
     })();
+    <?php endif; ?>
 
     // das selbe für aside
     <?php if ($this->countModules('sidebar')): ?>

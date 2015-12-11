@@ -9,7 +9,7 @@
 defined('_JEXEC') or die;
 
 /**
- * joomskeleton, joomfluid joomflex and jduo chrome
+ * joomskeleton, joomfluid, joomflex, jduo and pasodoble module chrome
  **/
 
 function modChrome_jduo($module, &$params, &$attribs)

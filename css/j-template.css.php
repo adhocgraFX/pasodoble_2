@@ -86,6 +86,17 @@ $addcss = $this->params->get('addcss');
         }
     <?php endif; ?>
 
+    <?php if ($this->countModules('nav')): ?>
+        button.menu {
+            width: 3em;
+        }
+    <?php else : ?>
+        button.menu {
+            display: none !important;
+            visibility: hidden;
+        }
+    <?php endif; ?>
+
     <?php if ($this->countModules('sidebar')): ?>
         button.sidebar-menu {
             width: 3em;
