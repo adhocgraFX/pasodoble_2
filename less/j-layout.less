@@ -122,7 +122,7 @@ section.bottom {
 
 section.inner-top {
     background: @smoke;
-    margin-top: -.5em;
+    margin-top: -.5em !important;
 }
 
 section.inner-bottom {
@@ -151,7 +151,6 @@ section.inner-bottom {
 	.module {
 		.flex(1 1 auto);
 		margin: .5em;
-        width: 18em;
 
         &.size-2 {
             .flex(2 1 auto);
@@ -164,6 +163,14 @@ section.inner-bottom {
         &.size-4 {
             .flex(4 1 auto);
         }
+    }
+}
+
+footer,
+section.top,
+section.bottom {
+    .module {
+        width: 18em;
     }
 }
 
@@ -191,6 +198,11 @@ section.inner-bottom {
 
             section.content {
                 margin: .5em auto;
+            }
+
+            section.inner-bottom,
+            section.inner-top {
+                margin: 0 auto;
             }
         }
 

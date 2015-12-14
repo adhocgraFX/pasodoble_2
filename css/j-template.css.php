@@ -131,14 +131,6 @@ $addcss = $this->params->get('addcss');
         max-width: <?php echo $rowmodulewidth;?>em;
         min-width: <?php echo $minrowmodulewidth;?>em;
     }
-    section.inner-top .module {
-        max-width: <?php echo $rowmodulewidth;?>em;
-        min-width: <?php echo $minrowmodulewidth;?>em;
-    }
-    section.inner-bottom .module {
-        max-width: <?php echo $rowmodulewidth;?>em;
-        min-width: <?php echo $minrowmodulewidth;?>em;
-    }
 
     @media screen and (min-width: 47em) {
 
@@ -179,7 +171,9 @@ $addcss = $this->params->get('addcss');
             flex: <?php echo $mainwidth;?>;
         }
 
-        section.content {
+        section.content,
+        section.inner-bottom,
+        section.inner-top {
             max-width: <?php echo $contentwidth;?>em;
         }
 
