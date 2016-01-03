@@ -13,5 +13,8 @@
 // flickity by dessandro
 // @prepros-append flickity.pkgd.min.js
 
-// doubletaptogo > hover lˆsung f¸r drop downs
+// doubletaptogo > hover l√∂sung f√ºr drop downs
 // @prepros-append doubletaptogo.min.js
+
+// prism code highlighting
+// @prepros-append prism.js

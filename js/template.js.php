@@ -35,4 +35,7 @@ require('flickity.pkgd.min.js');
 
 // doubletaptogo > hover lösung für drop downs
 require('doubletaptogo.min.js');
+
+// prism code highlighting
+require('prism.js');
 ?>

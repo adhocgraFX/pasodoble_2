@@ -34,7 +34,9 @@ gulp.task('script', function () {
         // flickity by dessandro
         'js/flickity.pkgd.min.js',
         // doubletaptogo > hover lösung für drop downs
-        'js/doubletaptogo.min.js'
+        'js/doubletaptogo.min.js',
+        // prism code highlighting
+        'js/prism.js'
     ])
         .pipe(uglify())
         .pipe(concat('app.js'))
