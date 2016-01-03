@@ -75,14 +75,10 @@ endif;
 	<?php endif; ?>
 <?php endif; ?>
 
-<!-- template css oder anderes css -->
-<?php if ($view == "form" or $layout == "edit"):
-	// $doc->addStyleSheet($tpath . '/css/j-template.css');
-	$doc->addStyleSheet($tpath . '/dist/style.css');
-else:
-	// $doc->addStyleSheet($tpath . '/css/j-template.css');
-	$doc->addStyleSheet($tpath . '/dist/style.css');
-endif; ?>
+<!-- template css
+// $doc->addStyleSheet($tpath . '/css/j-template.css');
+-->
+<?php $doc->addStyleSheet($tpath . '/dist/style.css'); ?>
 
 <!doctype html>
 
@@ -290,19 +286,19 @@ endif; ?>
 			<jdoc:include type="modules" name="bottom_row" style="jduo"/>
 		</section>
 	<?php endif; ?>
+
+	<?php if ($this->countModules('breadcrumbs')): ?>
+		<section class="breadcrumbs-container block-group" role="navigation">
+			<jdoc:include type="modules" name="breadcrumbs"/>
+		</section>
+	<?php endif; ?>
+
+	<?php if ($this->countModules('footer')): ?>
+		<footer class="block-group" role="contentinfo">
+			<jdoc:include type="modules" name="footer" style="jduo"/>
+		</footer>
+	<?php endif; ?>
 </section>
-
-<?php if ($this->countModules('breadcrumbs')): ?>
-	<section class="breadcrumbs-container block-group" role="navigation">
-		<jdoc:include type="modules" name="breadcrumbs"/>
-	</section>
-<?php endif; ?>
-
-<?php if ($this->countModules('footer')): ?>
-	<footer class="block-group" role="contentinfo">
-		<jdoc:include type="modules" name="footer" style="jduo"/>
-	</footer>
-<?php endif; ?>
 
 <a href="#" class="go-top"><span class="icon-chevron-up"></span><p hidden>Top</p></a>
 

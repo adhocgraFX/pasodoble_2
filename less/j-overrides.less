@@ -784,3 +784,65 @@ ul.list-striped {
 		}
 	}
 }
+
+// list unstyled
+ul.unstyled {
+	list-style-type: none;
+	margin: .5em 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+		padding: .5em;
+		display: block;
+		font-size: .875em;
+
+		a {
+			text-transform: uppercase; // je nach geschmack
+		}
+
+		a:hover, a:active {
+			text-decoration: underline !important;
+		}
+	}
+}
+
+div.checkbox-control-group {
+	.make-block;
+	width: 100%;
+
+	div.checkbox {
+		.make-block;
+		width: 1em;
+	}
+
+	div.checkbox-label {
+		.make-block;
+		width: auto;
+	}
+}
+
+div.control-group {
+	.make-block;
+	width: 100%;
+
+	div.controls {
+		.make-block;
+		width: 100%;
+
+		input, textarea, select {
+			width: 100%;
+			max-width: 24em;
+		}
+	}
+
+	div.control-label {
+		.make-block;
+		width: auto;
+	}
+}
+
+div.form-actions {
+	.make-block;
+	width: 100%;
+}
