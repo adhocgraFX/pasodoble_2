@@ -51,6 +51,10 @@ if ($unset == 1) :
 	unset($doc->_scripts[$this->baseurl . '/media/jui/js/jquery-migrate.min.js']);
 	unset($doc->_scripts[$this->baseurl . '/media/system/js/caption.js']);
 	unset($doc->_scripts[$this->baseurl . '/media/system/js/html5fallback.js']);
+
+elseif ($view == "form" || $layout == "edit" ) :
+	// für frontend editing
+	JHtml::_('bootstrap.framework');
 else:
 	// add jquery framework
 	JHtml::_('jquery.framework');
@@ -75,10 +79,15 @@ endif;
 	<?php endif; ?>
 <?php endif; ?>
 
-<!-- template css
-// $doc->addStyleSheet($tpath . '/css/j-template.css');
--->
-<?php $doc->addStyleSheet($tpath . '/dist/style.css'); ?>
+<?php if ($view == "form" || $layout == "edit" ) :
+	// für frontend editing zusätzlich protostar css laden
+	// $doc->addStyleSheet($tpath . '/css/legacy.css');
+	// template css
+	$doc->addStyleSheet($tpath . '/dist/style.css');
+else:
+	// alternativ: $doc->addStyleSheet($tpath . '/css/j-template.css');
+	$doc->addStyleSheet($tpath . '/dist/style.css');
+endif; ?>
 
 <!doctype html>
 
