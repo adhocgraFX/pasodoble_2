@@ -14,6 +14,7 @@
 * responsive touchable slides: [flickity](http://flickity.metafizzy.co/ "flickity")
 * modal media boxes: [formstone lightbox](http://formstone.it/components/lightbox/ "formstone lightbox")
 * responsive images: [mobify](http://www.mobify.com/mobifyjs/ "mobify.js")
+* code display: [prism](http://prismjs.com/index.html "prism.js")
 * analytics / options
 * font resizer
 
