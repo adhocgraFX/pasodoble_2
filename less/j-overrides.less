@@ -911,7 +911,15 @@ div.control-group {
     .make-block;
     width: 100%;
 
-    input, textarea, select {
+    input[type="color"],
+    input[type="number"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime-local"],
+    textarea,
+    select {
       width: 100%;
       max-width: 24em;
     }
@@ -932,10 +940,58 @@ div.rokpad-editor-wrapper {
   .make-block;
   width: 100%;
 }
-/*
-// protostar overrides
-body.site {
-  border: 0;
+
+ul.btn-toolbar {
+  list-style-type: none;
+  .make-block;
+  width: 100%;
+  margin: .5em 0;
   padding: 0;
+
+  li {
+    margin: .5em 0;
+    padding: .5em 0;
+  }
 }
-*/
+
+// span D-A-CH
+
+ h1.logo-text a span.d-a-ch {
+  font-weight: @bold !important;
+  color: @color-accent !important;
+}
+
+// span Jugfulda
+span.jf-blue {
+  color: @joomla-blue;
+}
+
+span.jf-red {
+  color: @joomla-red;
+}
+
+span.jf-orange {
+  color: @joomla-orange;
+}
+
+span.jf-green {
+  color: @joomla-green;
+}
+
+@media screen and (min-width: 47em) {
+
+  span.jf-blue,
+  span.jf-red,
+  span.jf-orange,
+  span.jf-green {
+    font-size: 2vw !important;
+  }
+
+  .jf-title {
+    font-size: 4vw !important;
+    max-width: 4.5em !important;
+    line-height: .6 !important;
+    margin-bottom: .6em !important;
+  }
+
+}
