@@ -36,6 +36,7 @@ $fontloadercss = $this->params->get('fontloadercss');
 $fontloaderjs  = $this->params->get('fontloaderjs');
 
 $headerbackground = $this->params->get('headerbackground');
+$hltext = $this->params->get('hltext');
 
 $buttontext = $this->params->get('buttontext');
 $buttonlink = $this->params->get('buttonlink');
@@ -212,15 +213,19 @@ endif; ?>
 	<section class="app-bar-container">
 		<button class="leftbar-menu" aria-label="Sidebar"></button>
 		<button class="menu" aria-label="Navigation"></button>
-		<h1 class="logo-text">
-			<a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitename); ?></a>
-		</h1>
-		<!-- <h1 class="logo-text">
-			<a href="<?php echo $this->baseurl ?>">Joomla!Magazin <span class="d-a-ch">D-A-CH</span> </a>
-		</h1> -->
-		<!-- <h1 class="logo-text jf-title">
-			<a href="<?php echo $this->baseurl ?>">Joomla!<sup>&reg;</sup><span class="jf-green"> User</span><span class="jf-orange"> Group</span><span class="jf-red"> Fulda</span></a>
-		</h1> -->
+		<?php if ($hltext == "default") : ?>
+			<h1 class="logo-text">
+				<a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitename); ?></a>
+			</h1>
+		<?php elseif ($hltext == "jmag") : ?>
+			<h1 class="logo-text">
+				<a href="<?php echo $this->baseurl ?>">Joomla!Magazin <span class="d-a-ch">D-A-CH</span> </a>
+			</h1>
+		<?php elseif ($hltext == "jugfulda"): ?>
+			<h1 class="logo-text jf-title">
+				<a href="<?php echo $this->baseurl ?>">Joomla!<sup>&reg;</sup><span class="jf-green"> User</span><span class="jf-orange"> Group</span><span class="jf-red"> Fulda</span></a>
+			</h1>
+		<?php endif; ?>
 		<button class="actions" aria-label="actions"></button>
 		<button class="sidebar-menu" aria-label="Sidebar"></button>
 	</section>

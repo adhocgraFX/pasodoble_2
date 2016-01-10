@@ -303,6 +303,21 @@
                        size="100" >
                 </field>
 
+                <field name="Site Title in Header Text Area"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="hltext"
+                       type="radio"
+                       default="default"
+                       label="Header Text"
+                       description="Header Text H1"
+                       class="btn-group" >
+                    <option value="default">default</option>
+                    <option value="jmag">Joomla!Magazin D-A-CH</option>
+                    <option value="jugfulda">JUG Fulda</option>
+                </field>
+
                 <field name="Design Copyright Information"
                        type="spacer"
                        hr="false" >
