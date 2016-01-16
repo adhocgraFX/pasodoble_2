@@ -106,12 +106,64 @@ div.pagination {
   }
 }
 
-// ??
-.pagenavcounter {
-  font-weight: normal;
+// Seitenumbruch pagebreak
+div.article-index {
+  .make-block;
+  margin: .5em 0;
+  font-size: .875em;
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: 500 !important;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: .25em 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      position: relative;
+      display: block;
+      float: left;
+      padding: 0;
+      margin: 0;
+
+      a {
+        text-decoration: none;
+        font-weight: normal;
+        position: relative;
+        display: block;
+        float: left;
+        padding: .5em 1em;
+        margin: .25em .25em 0 0;
+        color: @color-accent-text;
+        background: @color-accent;
+
+        &:hover {
+          background: lighten(@color-accent, 20%);
+        }
+
+        &:focus, &:active {
+          background: darken(@color-accent, 10%);
+        }
+      }
+    }
+  }
+}
+
+div.pagenavcounter {
+  .make-block;
+  margin: .5em 0;
+  font-size: .875em;
   color: @concrete-dark;
-  padding: 1em 0;
-  margin: 1em 0;
+}
+
+hr.system-pagebreak {
+  border: 0 !important;
+  margin: 0;
+  height: 0;
 }
 
 // search results
@@ -260,8 +312,8 @@ a.flat {
 }
 
 // pager / pagenav overrides
-
-ul.pager {
+ul.pager, ul.pagenav {
+  .make-block;
   margin: .5em 0;
   padding: 0;
   font-size: 0.875em;
@@ -319,6 +371,74 @@ ul.pager {
       outline: 0;
       .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
       text-shadow: none;
+    }
+  }
+}
+
+div.pager {
+  .make-block;
+  margin: .5em 0;
+  padding: 0;
+  font-size: 0.875em;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+
+      &:first-of-type {
+        float: left;
+      }
+
+      &:last-of-type {
+        float: right;
+      }
+    }
+
+    li a {
+      display: inline-block;
+      .ie7-inline-block();
+      padding: .5em 1em .33em 1em;
+      margin: 0;
+      font-size: @font-size-default;
+      line-height: @line-height-default;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      border: 0;
+      *border: 0; // Remove the border to prevent IE7's black border on input:focus
+      .border-radius(0);
+      .ie7-restore-left-whitespace(); // Give IE7 some love
+      .box-shadows(0 0 0 0 transparent, 0 0 0 0 transparent);
+      text-shadow: none;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+
+      // Hover/focus state
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        text-shadow: none;
+        outline: 0;
+        .box-shadows(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+      }
+
+      // Focus state for keyboard and accessibility
+      &:focus {
+        .tab-focus();
+        outline: 0;
+      }
+
+      // Active state
+      &.active,
+      &:active {
+        background-image: none;
+        outline: 0;
+        .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+        text-shadow: none;
+      }
     }
   }
 }
@@ -441,20 +561,6 @@ article {
     margin: 0 1em 0 0 !important;
     position: relative;
     top: -.4em;
-  }
-}
-
-// pagebreak
-.article-index {
-  margin: 0 0 1em 1em;
-
-  h3 {
-    font-size: 1.25em;
-    font-weight: 500 !important;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
   }
 }
 
