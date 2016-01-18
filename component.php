@@ -11,14 +11,8 @@ $sitename  = $app->get('sitename');
 // generator tag
 $this->setGenerator(null);
 
-// für frontend editing
-// JHtml::_('bootstrap.framework');
-// oder
 // add jquery framework
-JHtml::_('jquery.framework');
-
-// für frontend editing zusätzlich protostar css
-// $doc->addStyleSheet($tpath . '/css/legacy.css');
+// JHtml::_('jquery.framework');
 
 // template css
 $doc->addStyleSheet($tpath . '/dist/style.css');

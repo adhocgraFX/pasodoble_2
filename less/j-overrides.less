@@ -387,6 +387,7 @@ div.pager {
 
     li {
       list-style-type: none;
+      margin: 0;
 
       &:first-of-type {
         float: left;
@@ -399,9 +400,8 @@ div.pager {
 
     li a {
       display: inline-block;
-      .ie7-inline-block();
       padding: .5em 1em .33em 1em;
-      margin: 0;
+      .ie7-inline-block();
       font-size: @font-size-default;
       line-height: @line-height-default;
       text-align: center;
