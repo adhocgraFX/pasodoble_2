@@ -8,26 +8,36 @@ $date = JFactory::getDate();
 $cur_year = JHtml::_('date', $date, 'Y');
 $sitename  = $app->get('sitename');
 
+$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap.min.css');
+$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-extended.css');
+$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-responsive.css');
+
+// template css
+// $doc->addStyleSheet($tpath . '/dist/style.css');
+$doc->addStyleSheet($tpath . '/dist/print.css');
+
+// für frontend editing
+JHtml::_('bootstrap.framework');
+
 // generator tag
 $this->setGenerator(null);
 
-// add jquery framework
-// JHtml::_('jquery.framework');
+// get html head data
+$head = $this->getHeadData();
 
-// template css
-$doc->addStyleSheet($tpath . '/dist/style.css');
-$doc->addStyleSheet($tpath . '/dist/print.css');
+// remove deprecated meta-data (html5)
+unset($head['metaTags']['http-equiv']);
 
+$this->setHeadData($head);
 ?>
 
 <!doctype html>
 
-<html lang="<?php echo $this->language; ?>">
+<html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
 
 <head>
-
+	<meta charset="<?php echo $this->getCharset(); ?>">
 	<jdoc:include type="head"/>
-
 </head>
 
 <body class="contentpane" id="print">

@@ -52,6 +52,9 @@ if ($unset == 1) :
 	unset($doc->_scripts[$this->baseurl . '/media/jui/js/jquery-migrate.min.js']);
 	unset($doc->_scripts[$this->baseurl . '/media/system/js/caption.js']);
 	unset($doc->_scripts[$this->baseurl . '/media/system/js/html5fallback.js']);
+elseif ($view == "form" || $layout == "edit" ) :
+	// für frontend editing
+	JHtml::_('bootstrap.framework');
 else:
 	// add jquery framework
 	JHtml::_('jquery.framework');
@@ -76,12 +79,20 @@ endif;
 	<?php endif; ?>
 <?php endif; ?>
 
-<?php $doc->addStyleSheet($tpath . '/dist/style.css'); ?>
-<!-- alternativ: $doc->addStyleSheet($tpath . '/css/j-template.css'); -->
+<?php if ($view == "form" || $layout == "edit" ) :
+	// für frontend editing zusätzlich bootstrap css laden
+	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap.min.css');
+	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-extended.css');
+	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-responsive.css');
+	// template css
+	$doc->addStyleSheet($tpath . '/dist/style.css');
+else:
+	$doc->addStyleSheet($tpath . '/dist/style.css');
+endif; ?>
 
 <!doctype html>
 
-<html lang="<?php echo $this->language; ?>">
+<html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
 
 <head>
 
@@ -290,7 +301,6 @@ endif;
 	<script type="text/javascript" src="<?php echo $tpath . '/js/template.js.php?u=' . $unset . 'v=1'; ?>"></script>
 <?php else: ?>
 	<script type="text/javascript" src="<?php echo $tpath . '/dist/app.js'; ?>"></script>
-	<!-- <script type="text/javascript" src="<?php echo $tpath . '/js/template-dist.js'; ?>"></script> -->
 <?php endif; ?>
 
 <!-- load plugin options -->
