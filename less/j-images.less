@@ -26,6 +26,27 @@ img {
     &.third-image {
 		width: 33%;
 	}
+
+	&.pull-right,
+	&.right-image {
+		float:right;
+		display:inline;
+		margin: 1.5em 0 0 1em;
+	}
+
+	&.pull-left,
+	&.left-image {
+		float:left;
+		display:inline;
+		margin: 1.5em 1em 0 0;
+	}
+
+	&.pull-center,
+	&.center-image {
+		display:block;
+		text-align:center;
+		margin: 1.5em auto 0 auto;
+	}
 }
 
 // figure and figcaption (caption js)
