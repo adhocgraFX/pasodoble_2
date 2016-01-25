@@ -84,8 +84,8 @@ endif;
 	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap.min.css');
 	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-extended.css');
 	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-responsive.css');
-	// template css
-	$doc->addStyleSheet($tpath . '/dist/style.css');
+	// basic template css
+	$doc->addStyleSheet($tpath . '/dist/basic.css');
 else:
 	$doc->addStyleSheet($tpath . '/dist/style.css');
 endif; ?>

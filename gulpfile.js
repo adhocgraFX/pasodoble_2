@@ -61,6 +61,19 @@ gulp.task('style', function () {
         .pipe(notify({message:'style.css erfolgreich destilliert, hicks'}));
 });
 
+gulp.task('basic', function () {
+    return gulp.src([
+            'less/j-basic-template.less'
+        ])
+        .pipe(sourcemaps.init())
+        .pipe(less())
+        .pipe(autoprefix('last 10 versions', 'ie 9', 'ie 8'))
+        .pipe(minifyCSS())
+        .pipe(concat('basic.css'))
+        .pipe(sourcemaps.write('map'))
+        .pipe(gulp.dest('dist'))
+        .pipe(notify({message:'basic.css erfolgreich destilliert, hicks'}));
+});
 
 gulp.task('print', function () {
     return gulp.src([
@@ -82,13 +95,13 @@ gulp.task('watch', function(){
 
     // TEMPLATE FILES
     gulp.watch('js/**/*.js',['script']).on('change', livereload.changed);
-    gulp.watch('less/**/*.less',['style', 'print']).on('change', livereload.changed);
+    gulp.watch('less/**/*.less',['style', 'basic', 'print']).on('change', livereload.changed);
 });
 
 
 // DEFAULT TASK
-gulp.task('default', ['script', 'style', 'print']);
+gulp.task('default', ['script', 'style', 'basic', 'print']);
 
 
 // DEFAULT + WATCH
-gulp.task('all', ['script', 'style', 'print', 'watch']);
+gulp.task('all', ['script', 'style', 'basic', 'print', 'watch']);
