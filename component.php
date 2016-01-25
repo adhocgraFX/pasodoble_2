@@ -13,7 +13,6 @@ $doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-extended.css');
 $doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-responsive.css');
 
 // template css
-// $doc->addStyleSheet($tpath . '/dist/style.css');
 $doc->addStyleSheet($tpath . '/dist/print.css');
 
 // für frontend editing
@@ -38,6 +37,16 @@ $this->setHeadData($head);
 <head>
 	<meta charset="<?php echo $this->getCharset(); ?>">
 	<jdoc:include type="head"/>
+
+	// für frontend editing
+	<style type="text/css">
+		@media (max-width: 767px) {
+			.thumbnails > li {
+				float: left !important;
+				margin-left: 20px !important;
+			}
+		}
+	</style>
 </head>
 
 <body class="contentpane" id="print">

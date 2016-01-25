@@ -83,7 +83,7 @@ endif;
 	// frontend editing > zusätzlich bootstrap css
 	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap.min.css');
 	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-extended.css');
-	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-responsive.css');
+	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-responsive.min.css');
 	// basic template css
 	$doc->addStyleSheet($tpath . '/dist/basic.css');
 else:

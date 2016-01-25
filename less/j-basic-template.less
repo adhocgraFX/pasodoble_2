@@ -2,7 +2,7 @@
 
 //
 // normalize.css v3.0
-@import "j-normalize-v3";
+// @import "j-normalize-v3";
 
 // material design color palettes
 @import "j-palette.less";
@@ -28,7 +28,7 @@
 // css basic styles
 
 // typography
-@import "j-typo.less";
+// @import "j-typo.less";
 
 // tables
 // @import "j-tables.less";
@@ -47,7 +47,7 @@
 
 // fonts
 // auskommentieren, je nachdem
-@import "j-fonts.less";
+// @import "j-fonts.less";
 
 //
 //
@@ -91,3 +91,18 @@
 // @import "phoca-maps.less";
 // @import "j-overrides.less";
 // @import "j-gallery-overrides";
+
+
+// frontend editing overrides
+select, textarea, input[type="text"],
+input[type="password"], input[type="datetime"],
+input[type="datetime-local"], input[type="date"], input[type="month"],
+input[type="time"], input[type="week"], input[type="number"], input[type="email"],
+input[type="url"], input[type="search"], input[type="tel"], input[type="color"],
+.uneditable-input {
+    height: initial !important;
+}
+
+.input-append .add-on, .input-prepend .add-on {
+    height: initial !important;
+}
