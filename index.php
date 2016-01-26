@@ -52,7 +52,7 @@ if ($unset == 1) :
 	unset($doc->_scripts[$this->baseurl . '/media/jui/js/jquery-migrate.min.js']);
 	unset($doc->_scripts[$this->baseurl . '/media/system/js/caption.js']);
 	unset($doc->_scripts[$this->baseurl . '/media/system/js/html5fallback.js']);
-elseif ($view == "form" || $layout == "edit" ) :
+elseif ($view == "form" || $layout == "edit") :
 	// frontend editing
 	JHtml::_('bootstrap.framework');
 else:
@@ -79,7 +79,7 @@ endif;
 	<?php endif; ?>
 <?php endif; ?>
 
-<?php if ($view == "form" || $layout == "edit" ) :
+<?php if ($view == "form" || $layout == "edit") :
 	// frontend editing > zusätzlich bootstrap css
 	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap.min.css');
 	$doc->addStyleSheet($this->baseurl . '/media/jui/css/bootstrap-extended.css');
@@ -101,7 +101,7 @@ endif; ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<?php if ($view != "form" || $layout != "edit" ) : ?>
+	<?php if ($view != "form" || $layout != "edit") : ?>
 	<!-- Bildverkleinerung über mobify cdn -->
 	<script>!function(a,b,c,d,e){function g(a,c,d,e){var f=b.getElementsByTagName("script")[0];a.src=e,a.id=c,a.setAttribute("class",d),f.parentNode.insertBefore(a,f)}a.Mobify={points:[+new Date]};var f=/((; )|#|&|^)mobify=(\d)/.exec(location.hash+"; "+b.cookie);if(f&&f[3]){if(!+f[3])return}else if(!c())return;b.write('<plaintext style="display:none">'),setTimeout(function(){var c=a.Mobify=a.Mobify||{};c.capturing=!0;var f=b.createElement("script"),h="mobify",i=function(){var c=new Date;c.setTime(c.getTime()+3e5),b.cookie="mobify=0; expires="+c.toGMTString()+"; path=/",a.location=a.location.href};f.onload=function(){if(e)if("string"==typeof e){var c=b.createElement("script");c.onerror=i,g(c,"main-executable",h,mainUrl)}else a.Mobify.mainExecutable=e.toString(),e()},f.onerror=i,g(f,"mobify-js",h,d)})}(window,document,function(){a=/webkit|(firefox)[\/\s](\d+)|(opera)[\s\S]*version[\/\s](\d+)|(trident)[\/\s](\d+)/i.exec(navigator.userAgent);return!a||a[1]&&4>+a[2]||a[3]&&11>+a[4]||a[5]&&6>+a[6]?!1:!0},
 
@@ -299,7 +299,7 @@ endif; ?>
 <jdoc:include type="modules" name="debug"/>
 
 <!-- todo frontend editing > js konflikt -->
-<?php if ($view != "form" || $layout != "edit" ) : ?>
+<?php if ($view != "form" || $layout != "edit") : ?>
 	<!-- load plugin scripts -->
 	<?php if ($unset == 1): ?>
 		<script type="text/javascript" src="<?php echo $tpath . '/js/template.js.php?u=' . $unset . 'v=1'; ?>"></script>

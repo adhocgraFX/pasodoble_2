@@ -51,9 +51,11 @@
 
 ###Work in progress!
 #### todos:
-* der heilige Gral - die Suche geht weiter - gulpfile für js und less :)
-* Gulp für js und less eingerichtet, style.css und app.js in dist folder
-* css sourcemap via gulp in map folder
+* der heilige Gral - die Suche geht weiter - gulpfile für js und less
 * unset über options steuerbar; dann wird template.js.php anstelle app.js geladen 
-* frontend editing    
+
+#### Gulp:
+* js und less: style.css und app.js in dist folder
+* css sourcemaps: in dist/map folder
+
     

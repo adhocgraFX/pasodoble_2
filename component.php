@@ -37,8 +37,6 @@ $this->setHeadData($head);
 <head>
 	<meta charset="<?php echo $this->getCharset(); ?>">
 	<jdoc:include type="head"/>
-
-	// für frontend editing
 	<style type="text/css">
 		@media (max-width: 767px) {
 			.thumbnails > li {
