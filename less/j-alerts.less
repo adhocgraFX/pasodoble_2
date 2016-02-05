@@ -1,12 +1,14 @@
 .alert {
-    color: @concrete;
     background-color: @smoke;
-    border: 1px solid @concrete;
     margin-bottom: 2em;
     padding: .5em 1em;
+    border: 1px solid;
 
-    h4.alert-heading, a.close {
-        color: @concrete;
+    a.close {
+        display: inline-block;
+        padding: 0 .5em;
+        margin: 0;
+        cursor: pointer;
     }
 }
 
@@ -19,7 +21,7 @@
     }
 }
 
-.alert-error {
+.alert-error, .alert-danger {
     color: @color-error;
     border-color: @color-error;
 
@@ -37,7 +39,7 @@
     }
 }
 
-.alert-info {
+.alert-info, .alert-message {
     color: @color-info;
     border-color: @color-info;
 
