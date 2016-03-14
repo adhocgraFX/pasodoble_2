@@ -11,7 +11,7 @@ fieldset {
 input,
 textarea,
 select {
-    border: 0px solid transparent;
+    border: 0 solid transparent;
     border-bottom: .2em solid @color-link;
 	padding: .5em 1em 0.33em 1em;
 	outline: none;
@@ -23,7 +23,7 @@ select {
 	margin-bottom: .5em;
 
 	&:focus {
-        border: 0px solid transparent;
+        border: 0 solid transparent;
         border-bottom: .2em solid @color-link-focus;
 		color: @gray-dark;
 		background: @smoke;
@@ -52,8 +52,13 @@ input[type="month"],
 input[type="week"],
 input[type="time"],
 input[type="datetime-local"] {
-	// padding: .5em;
     font-size: .875em;
+}
+
+input[type="color"] {
+	padding: inherit;
+	color:inherit;
+	background: inherit;
 }
 
 input[type="button"],
@@ -62,24 +67,27 @@ input[type="submit"] {
 	border: 0;
 }
 
-
-textarea {
-	min-height: 10em;
-}
-
-label,
-legend {
-	display: block;
-	font-size: .875em;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
 	display: inline;
 }
 
-label span,
-legend span {
-	font-weight: normal;
-	font-size: .875em;
-	color: @gray;}
+textarea {
+    min-height: 10em;
+}
+
+label,
+legend {
+    display: block;
+    font-size: .875em;
+
+    span {
+        font-weight: normal;
+        font-size: .875em;
+        color: @gray;
+
+        &.required {
+            color: @color-accent !important;
+        }
+    }
+}

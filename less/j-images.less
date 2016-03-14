@@ -50,16 +50,19 @@ img {
 }
 
 // figure and figcaption (caption js)
-
 figure {
 	margin: 0 0 @paragraph-val 0;
-	background: @gainsboro-light;
+	background: @gainsboro-lighter;
 	border: 1px solid @gainsboro;
 
 	figcaption {
 		font-size: 100%;
 		font-style: italic;
-		margin: @paragraph-val/2;
+		margin: @paragraph-val/2 @paragraph-val;
+	}
+
+	img {
+		width: 100%; // geht nicht anders
 	}
 }
 

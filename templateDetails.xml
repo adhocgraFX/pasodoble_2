@@ -199,7 +199,8 @@
                     <option value="0">JNO</option>
                 </field>
 
-                <field name="addcss" type="textarea"
+                <field name="addcss"
+                       type="textarea"
                        label="Additional CSS"
                        description="Add personal CSS rules"
                        cols="30"
@@ -334,6 +335,50 @@
                        default="http://my_site.de"
                        label="Site"
                        description="Designers Website: http://my_site.de"
+                       filter="raw"
+                       size="100" >
+                </field>
+                <field name="Accept Cookie Option"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="acceptcookie"
+                       type="radio"
+                       default="0"
+                       label="Accept Cookie"
+                       description="Show accept cookie info"
+                       class="btn-group btn-group-yesno" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="cookieinfotext"
+                       type="textarea"
+                       default="Cookie info text"
+                       label="Cookie info text"
+                       description="Add your cookie info text"
+                       cols="30"
+                       rows="4"
+                       size="500" >
+                </field>
+                <field name="cookiebuttontext"
+                       type="text"
+                       default="Cookie button caption"
+                       label="Cookie button caption"
+                       description="Add your cookie button caption"
+                       size="30" >
+                </field>
+                <field name="cookielinktext"
+                       type="textarea"
+                       default="Cookie link caption"
+                       label="Cookie link caption"
+                       description="Add your cookie link caption"
+                       size="100" >
+                </field>
+                <field name="cookielink"
+                       type="textarea"
+                       default="http://my_site.de"
+                       label="Cookie info link"
+                       description="Add your cookie info link: http://my_site.de"
                        filter="raw"
                        size="100" >
                 </field>

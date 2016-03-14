@@ -41,6 +41,12 @@ $hltext = $this->params->get('hltext');
 $buttontext = $this->params->get('buttontext');
 $buttonlink = $this->params->get('buttonlink');
 $unset      = $this->params->get('unset');
+// cookies
+$c_accept = $this->params->get('acceptcookie');
+$c_infotext = $this->params->get('cookieinfotext');
+$c_buttontext = $this->params->get('cookiebuttontext');
+$c_linktext = $this->params->get('cookielinktext');
+$c_link = $this->params->get('cookielink');
 
 // generator tag
 $this->setGenerator(null);
@@ -295,6 +301,63 @@ endif; ?>
 </section>
 
 <a href="#" class="go-top"><span class="icon-chevron-up"></span><p hidden>Top</p></a>
+
+<!-- cookie info -->
+<?php if ($c_accept == 1) : ?>
+
+	<?php if(isset($_POST['set_cookie'])):
+		if($_POST['set_cookie']==1)
+			setcookie("acceptcookie", "yes", time()+3600*24*365, "/");
+		?>
+	<?php endif; ?>
+
+	<div id="accept-cookie-container" class="box info" style="display:none;position:fixed;bottom:-1em;font-size:.75em;width:100%;text-align:center;z-index:99999">
+		<p><?php echo htmlspecialchars($c_infotext); ?>
+		<?php if (($c_linktext != "Cookie link caption") and ($c_link != "http://my_site.de")): ?>
+			<a href="<?php echo htmlspecialchars($c_link); ?>">
+				<?php echo htmlspecialchars($c_linktext); ?></a>
+		<?php endif; ?></p>
+		<button id="accept" class="btn btn-accent"><?php echo htmlspecialchars($c_buttontext); ?></button>
+	</div>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function () {
+
+			function setCookie(c_name,value,exdays)
+			{
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate() + exdays);
+				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()) + "; path=/";
+				document.cookie=c_name + "=" + c_value;
+			}
+
+			function readCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for(var i=0;i < ca.length;i++) {
+					var c = ca[i];
+					while (c.charAt(0)==' ') c = c.substring(1,c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+				}
+				return null;
+			}
+
+			var $ca_container = jQuery('#accept-cookie-container');
+			var $ca_accept = jQuery('#accept');
+			var acceptcookie = readCookie('acceptcookie');
+			if(!(acceptcookie == "yes")){
+
+				$ca_container.delay(1000).slideDown('slow');
+
+				$ca_accept.click(function(){
+					setCookie("acceptcookie","yes",365);
+					jQuery.post('<?php echo JURI::current(); ?>', 'set_cookie=1', function(){});
+					$ca_container.slideUp('slow');
+				});
+			}
+		});
+	</script>
+<?php endif; ?>
 
 <jdoc:include type="modules" name="debug"/>
 
