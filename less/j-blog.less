@@ -4,16 +4,9 @@ div.header-img {
 }
 
 div.blog-featured,
-div.blog {
-    display: block;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    background: transparent;
-}
-
+div.blog,
 div.items-leading,
-div.items-row {
+div.items-row{
     display: block;
     overflow: hidden;
     padding: 0;
@@ -22,21 +15,15 @@ div.items-row {
 }
 
 article {
-    padding: 1em .5em;
+    padding: .5em;
     display: block;
-
-    h1.item-title,
-    h2.item-title {
-
-    }
+    overflow: hidden;
 
     &[class^="leading-"] {
-        overflow: hidden;
         border-bottom: .5em solid @gainsboro-light;
     }
 
     &.item {
-        overflow: hidden;
         border-bottom: .25em solid @gainsboro-light;
     }
 }
