@@ -28,25 +28,28 @@ $params    = $tpl->params;
 $action    = $menu->getActive() == $menu->getDefault() ? ('front') : ('site');
 
 // get template params
-$logo        = $this->params->get('logo');
-$textresizer = $this->params->get('textresizer');
-
-$whichmethod   = $this->params->get('whichmethod');
-$fontloadercss = $this->params->get('fontloadercss');
-$fontloaderjs  = $this->params->get('fontloaderjs');
-
+$logo           = $this->params->get('logo');
+$textresizer    = $this->params->get('textresizer');
+// fonts
+$whichmethod    = $this->params->get('whichmethod');
+$fontloadercss  = $this->params->get('fontloadercss');
+$fontloaderjs   = $this->params->get('fontloaderjs');
+// header style
 $headerbackground = $this->params->get('headerbackground');
-$hltext = $this->params->get('hltext');
-
-$buttontext = $this->params->get('buttontext');
-$buttonlink = $this->params->get('buttonlink');
-$unset      = $this->params->get('unset');
+$hltext         = $this->params->get('hltext');
+// call to action
+$buttontext     = $this->params->get('buttontext');
+$buttonlink     = $this->params->get('buttonlink');
+// unset js
+$unset          = $this->params->get('unset');
 // cookies
-$c_accept = $this->params->get('acceptcookie');
-$c_infotext = $this->params->get('cookieinfotext');
-$c_buttontext = $this->params->get('cookiebuttontext');
-$c_linktext = $this->params->get('cookielinktext');
-$c_link = $this->params->get('cookielink');
+$c_accept       = $this->params->get('acceptcookie');
+$c_infotext     = $this->params->get('cookieinfotext');
+$c_buttontext   = $this->params->get('cookiebuttontext');
+$c_linktext     = $this->params->get('cookielinktext');
+$c_link         = $this->params->get('cookielink');
+// mobify
+$mobify = $this->params->get('mobify');
 
 // generator tag
 $this->setGenerator(null);
@@ -107,8 +110,9 @@ endif; ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<?php if ($view != "form" || $layout != "edit") : ?>
+	<?php if ($mobify == 1): ?>
 		<!-- Bildverkleinerung über mobify cdn -->
+		<?php if ($view != "form" || $layout != "edit") : ?>
 		<script>!function(a,b,c,d,e){function g(a,c,d,e){var f=b.getElementsByTagName("script")[0];a.src=e,a.id=c,a.setAttribute("class",d),f.parentNode.insertBefore(a,f)}a.Mobify={points:[+new Date]};var f=/((; )|#|&|^)mobify=(\d)/.exec(location.hash+"; "+b.cookie);if(f&&f[3]){if(!+f[3])return}else if(!c())return;b.write('<plaintext style="display:none">'),setTimeout(function(){var c=a.Mobify=a.Mobify||{};c.capturing=!0;var f=b.createElement("script"),h="mobify",i=function(){var c=new Date;c.setTime(c.getTime()+3e5),b.cookie="mobify=0; expires="+c.toGMTString()+"; path=/",a.location=a.location.href};f.onload=function(){if(e)if("string"==typeof e){var c=b.createElement("script");c.onerror=i,g(c,"main-executable",h,mainUrl)}else a.Mobify.mainExecutable=e.toString(),e()},f.onerror=i,g(f,"mobify-js",h,d)})}(window,document,function(){a=/webkit|(firefox)[\/\s](\d+)|(opera)[\s\S]*version[\/\s](\d+)|(trident)[\/\s](\d+)/i.exec(navigator.userAgent);return!a||a[1]&&4>+a[2]||a[3]&&11>+a[4]||a[5]&&6>+a[6]?!1:!0},
 
 		// path to mobify.js
@@ -130,6 +134,7 @@ endif; ?>
 						});
 					}
 				});</script>
+		<?php endif; ?>
 	<?php endif; ?>
 
 	<!-- Disable tap highlight on IE -->
