@@ -623,4 +623,68 @@ h1.logo-text.jf-title {
     }
 }
 
+// overrides für j-comments
+.jcomments-links {
+    display: inline-block;
+}
 
+// j-comments
+a.comments-link,
+a.readmore-link {
+    background-image: none !important;
+    margin: 0 1em 1em 0;
+    display: inline-block;
+    padding: .5em 1em;
+    font-size: @font-size-default;
+    line-height: @line-height-default;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0;
+    .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+    text-shadow: none;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    color: @gray;
+    background: @whitesmoke;
+
+    // Hover/focus state
+    &:hover,
+    &:focus {
+        color: @gray;
+        background: @whitesmoke-light;
+        text-decoration: none;
+        text-shadow: none;
+        outline: 0;
+        .box-shadows(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
+    }
+
+    // Focus state for keyboard and accessibility
+    &:focus {
+        .tab-focus();
+        outline: 0;
+    }
+
+    // Active state
+    &.active,
+    &:active {
+        color: @gray;
+        background: @whitesmoke-dark;
+        background-image: none;
+        outline: 0;
+        .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
+        text-shadow: none;
+    }
+}
+
+a.comments-link {
+    &:before {
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        padding-right: 1em;
+        content: "\f0e5";
+    }
+}
