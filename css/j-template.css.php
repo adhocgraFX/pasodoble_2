@@ -20,6 +20,7 @@ $textindent = $this->params->get('textindent');
 $textresizer = $this->params->get('textresizer');
 $buttontext = $this->params->get('buttontext');
 $addcss = $this->params->get('addcss');
+$hltext = $this->params->get('hltext');
 ?>
 
 <style type="text/css">
@@ -215,6 +216,22 @@ $addcss = $this->params->get('addcss');
             min-width: <?php echo $minmodulewidth;?>em;
         }
     }
+
+	<?php if ($hltext == "jugfulda"): ?>
+
+		nav ul.nav li a::before {
+	        font-family: 'FontAwesome';
+	        line-height: 1;
+	        display: inline-block;
+	        text-decoration: inherit;
+	        padding-right: .5em;
+	        content: ""; }
+		nav ul.nav li:nth-child(1) a::before {content: "\f015";}
+        nav ul.nav li:nth-child(2) a::before {content: "\f05a";}
+        nav ul.nav li:nth-child(3) a::before {content: "\f073";}
+        nav ul.nav li:nth-child(4) a::before {content: "\f003";}
+		ul.nav li:hover ul.nav-child li a::before {padding-right: 0; content: "";}
+	<?php endif; ?>
 
 	<?php if (trim($addcss) != ''): ?>
 		<?php echo htmlspecialchars($addcss);?>

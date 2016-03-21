@@ -198,7 +198,7 @@ endif; ?>
 				<a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitename); ?></a>
 			</h1>
 		<?php elseif ($hltext == "jmag") : ?>
-			<h1 class="logo-text">
+			<h1 class="logo-text jm-title">
 				<a href="<?php echo $this->baseurl ?>">Joomla!Magazin <span class="d-a-ch">D-A-CH</span> </a>
 			</h1>
 		<?php elseif ($hltext == "jugfulda"): ?>
@@ -277,6 +277,17 @@ endif; ?>
 			<aside class="sidebar-container" role="complementary">
 				<h4 class="sidebar-text">Sidebar</h4>
 				<jdoc:include type="modules" name="sidebar" style="jduo"/>
+				<?php if ($hltext == "jugfulda"): ?>
+					<div class="module jf-icons">
+						<div class="module-body">
+							<ul>
+								<li><a href="https://www.facebook.com/jugfulda/" target="_blank" title="Joomla! User Group Fulda bei facebook"><span class="icon-facebook-square"></span><p hidden>facebook</p></a></li>
+								<li><a href="https://www.flickr.com/photos/jugfulda/" target="_blank" title="Joomla! User Group Fulda bei flickr"><span class="icon-flickr"></span><p hidden>flickr</p></a></li>
+								<li><a href="https://twitter.com/jugfulda/" target="_blank" title="Folge uns auf twitter"><span class="icon-twitter"></span><p hidden>twitter</p></a></li>
+							</ul>
+						</div>
+					</div>
+				<?php endif; ?>
 			</aside>
 		<?php endif; ?>
 	</section>

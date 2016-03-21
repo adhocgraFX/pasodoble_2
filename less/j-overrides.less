@@ -35,13 +35,6 @@ dl.search-results {
     }
 }
 
-// details
-dl.article-info {
-    margin: 1em 0;
-    font-size: 75%;
-    color: @gray-light;
-}
-
 // flat allg stil
 .flat {
     float: right !important;
@@ -94,85 +87,6 @@ a.flat {
             margin: 0 !important;
         }
     }
-}
-
-// items general + blog stuff
-
-article {
-    padding: 0 .5em 1em .5em;
-}
-
-.item {
-    display: block;
-    border-bottom: .25em solid @gainsboro-light;
-}
-
-.item-page {
-    display: block;
-    overflow: hidden;
-    margin: 1em 0;
-    background: transparent;
-
-    > h2 {
-        // margin-top: 0;
-    }
-}
-
-.blog, .blog-featured {
-    display: block;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    background: transparent;
-
-    > h2 {
-        //margin: .25em 0;
-    }
-}
-
-.items-leading {
-    display: block;
-    overflow: hidden;
-    margin: .5em 0;
-}
-
-[class^="leading-"] {
-    display: block;
-    overflow: hidden;
-    border-bottom: .5em solid @gainsboro-light;
-}
-
-.item-separator {
-    display: block;
-    overflow: hidden;
-    height: 1em;
-}
-
-.page-header, .subheading-category {
-    padding: 0;
-    margin: 0 !important;
-    border-bottom: 0 !important;
-
-    h1, h2, h2.subtitle {
-        // margin-top: 0;
-    }
-}
-
-.item-title {
-    line-height: @line-height-heading;
-    padding: 0;
-    // margin: 0 0 @small-paragraph-val 0 ;
-    border-bottom: 0 !important;
-}
-
-.blog .category-desc {
-    margin: 1em 0;
-    border-bottom: .5em solid @gainsboro-light;
-}
-
-.blog .cat-children .category-desc {
-    padding: 0;
-    margin: 1em 0 2em;
 }
 
 .content_rating {
@@ -651,63 +565,62 @@ ul.btn-toolbar {
     }
 }
 
+// h1 jm-title and jf-title
 // Joomla!Magazin D-A-CH
+h1.logo-text.jm-title {
 
-h1.logo-text a span.d-a-ch {
-    font-weight: @bold !important;
-    color: @color-accent !important;
+    a span.d-a-ch {
+        font-weight: @bold !important;
+        color: @color-accent !important;
+    }
 }
 
 // Jugfulda
-span.jf-blue {
-    color: @joomla-blue;
+h1.logo-text.jf-title {
+
+    span.jf-blue {
+        color: @joomla-blue;
+    }
+
+    span.jf-red {
+        color: @joomla-red;
+    }
+
+    span.jf-orange {
+        color: @joomla-orange;
+    }
+
+    span.jf-green {
+        color: @joomla-green;
+    }
 }
 
-span.jf-red {
-    color: @joomla-red;
-}
+@media screen and (max-width: 30em) {
 
-span.jf-orange {
-    color: @joomla-orange;
-}
+    h1.logo-text.jm-title {
+        font-size: 4.5vw;
+    }
 
-span.jf-green {
-    color: @joomla-green;
+    h1.logo-text.jf-title {
+        font-size: 4vw;
+    }
 }
 
 @media screen and (min-width: 47em) {
 
-    span.jf-blue,
-    span.jf-red,
-    span.jf-orange,
-    span.jf-green {
-        font-size: 2.4vw !important;
-    }
-
-    .jf-title {
+    h1.logo-text.jf-title {
         font-size: 5vw !important;
         max-width: 4.5em !important;
         line-height: .6 !important;
         margin-bottom: .6em !important;
+
+        span.jf-blue,
+        span.jf-red,
+        span.jf-orange,
+        span.jf-green {
+            font-size: 2.4vw !important;
+        }
     }
 }
 
-div.pull-right.item-image {
-    max-width: 33%;
-    height: auto;
-    margin-left: 1em;
-    margin-bottom: 1em;
-    float: right;
-}
 
-div.pull-left.item-image {
-    max-width: 33%;
-    height: auto;
-    margin-right: 1em;
-    margin-bottom: 1em;
-    float: left;
-}
-
-div.pull-none.item-image {
-
-}

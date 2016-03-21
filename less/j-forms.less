@@ -26,22 +26,24 @@ select {
         border: 0 solid transparent;
         border-bottom: .2em solid @color-link-focus;
 		color: @gray-dark;
-		background: @smoke;
+		background: @clouds;
 	}
 }
 
 input[disabled],
 textarea[disabled],
 select[disabled] {
-	border: 1px solid @gray-light;
+	border: 0 solid transparent;
+	border-bottom: .2em solid @gray-light;
 	color: @gray-light;
 }
 
 input[readonly],
 textarea[readonly],
 select[readonly] {
-	border: 1px solid @gray-light;
-	color: @gray;
+    border: 0 solid transparent;
+    border-bottom: .2em solid @gray-light;
+    color: @gray;
 }
 
 select,
