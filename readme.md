@@ -15,8 +15,9 @@
 * modal media boxes: [formstone lightbox](http://formstone.it/components/lightbox/ "formstone lightbox")
 * responsive images: [mobify](http://www.mobify.com/mobifyjs/ "mobify.js")
 * code display: [prism](http://prismjs.com/index.html "prism.js")
-* analytics / options
-* font resizer
+* analytics > options
+* font resizer > options
+* accept cookies info > options
 
 ###PasoDoble in action
 [pasodoble](http://pasodoble.adhocgrafx.de "PasoDoble")
