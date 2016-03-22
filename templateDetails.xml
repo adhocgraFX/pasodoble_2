@@ -69,7 +69,7 @@
 
     <languages folder="languages">
         <language tag="de-DE">de-DE.tpl_pasodoble.ini</language>
-        <language tag="en-EN">en-EN.tpl_pasodoble.ini</language>
+        <language tag="en-GB">en-GB.tpl_pasodoble.ini</language>
     </languages>
 
     <config>
@@ -90,10 +90,63 @@
                        description="Select header image / Important: add header-img as page class suffix" >
                 </field>
 
-                <field name="Typography"
+                <field name="Site Title in Header Text Area"
                        type="spacer"
                        hr="false" >
                 </field>
+                <field name="hltext"
+                       type="radio"
+                       default="default"
+                       label="Header Text"
+                       description="Header Text H1"
+                       class="btn-group" >
+                    <option value="default">default</option>
+                    <option value="jmag">Joomla!Magazin D-A-CH</option>
+                    <option value="jugfulda">JUG Fulda</option>
+                </field>
+
+                <field name="Call-to-action Button"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="buttontext"
+                       type="text"
+                       default=""
+                       label="Button Text"
+                       description="Button Text"
+                       size="30" >
+                </field>
+                <field name="buttonlink"
+                       type="textarea"
+                       default=""
+                       label="Button Link"
+                       description="Button Link"
+                       filter="raw"
+                       size="100" >
+                </field>
+
+                <field name="Design Copyright Information"
+                       type="spacer"
+                       hr="false" >
+                </field>
+                <field name="designername"
+                       type="text"
+                       default="my_name"
+                       label="Name"
+                       description="Designers Name"
+                       size="30" >
+                </field>
+                <field name="designersite"
+                       type="textarea"
+                       default="http://my_site.de"
+                       label="Site"
+                       description="Designers Website: http://my_site.de"
+                       filter="raw"
+                       size="100" >
+                </field>
+            </fieldset>
+
+            <fieldset name="TYPO">
                 <field name="bodyfont"
                        type="text"
                        default="Fira Sans"
@@ -176,39 +229,7 @@
                 </field>
             </fieldset>
 
-            <fieldset name="advanced">
-                <field name="Google Analytics"
-                       type="spacer"
-                       hr="false" >
-                </field>
-                <field name="analytics"
-                       type="text"
-                       default="UA-XXXXX-X"
-                       label="Google Analytics"
-                       description="Google analytics code; anonym, asynchon"
-                       size="10" >
-                </field>
-
-                <field name="mobify"
-                       type="radio"
-                       default="0"
-                       label="Mobify"
-                       description="Use mobify cdn as responsive image resizer"
-                       class="btn-group btn-group-yesno" >
-                    <option value="1">JYES</option>
-                    <option value="0">JNO</option>
-                </field>
-
-                <field name="unset"
-                       type="radio"
-                       default="0"
-                       label="Unset javascript"
-                       description="Unset all Joomla! javascripts and add them combined and compressed just before closing body tag"
-                       class="btn-group btn-group-yesno" >
-                    <option value="1">JYES</option>
-                    <option value="0">JNO</option>
-                </field>
-
+            <fieldset name="LAYOUT">
                 <field name="addcss"
                        type="textarea"
                        label="Additional CSS"
@@ -293,61 +314,41 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
+            </fieldset>
 
-                <field name="Call-to-action Button"
+            <fieldset name="advanced">
+                <field name="Google Analytics"
                        type="spacer"
                        hr="false" >
                 </field>
-                <field name="buttontext"
+                <field name="analytics"
                        type="text"
-                       default=""
-                       label="Button Text"
-                       description="Button Text"
-                       size="30" >
-                </field>
-                <field name="buttonlink"
-                       type="textarea"
-                       default=""
-                       label="Button Link"
-                       description="Button Link"
-                       filter="raw"
-                       size="100" >
+                       default="UA-XXXXX-X"
+                       label="Google Analytics"
+                       description="Google analytics code; anonym, asynchon"
+                       size="10" >
                 </field>
 
-                <field name="Site Title in Header Text Area"
-                       type="spacer"
-                       hr="false" >
-                </field>
-                <field name="hltext"
+                <field name="mobify"
                        type="radio"
-                       default="default"
-                       label="Header Text"
-                       description="Header Text H1"
-                       class="btn-group" >
-                    <option value="default">default</option>
-                    <option value="jmag">Joomla!Magazin D-A-CH</option>
-                    <option value="jugfulda">JUG Fulda</option>
+                       default="0"
+                       label="Mobify"
+                       description="Use mobify cdn as responsive image resizer"
+                       class="btn-group btn-group-yesno" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
                 </field>
 
-                <field name="Design Copyright Information"
-                       type="spacer"
-                       hr="false" >
+                <field name="unset"
+                       type="radio"
+                       default="0"
+                       label="Unset javascript"
+                       description="Unset all Joomla! javascripts and add them combined and compressed just before closing body tag"
+                       class="btn-group btn-group-yesno" >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
                 </field>
-                <field name="designername"
-                       type="text"
-                       default="my_name"
-                       label="Name"
-                       description="Designers Name"
-                       size="30" >
-                </field>
-                <field name="designersite"
-                       type="textarea"
-                       default="http://my_site.de"
-                       label="Site"
-                       description="Designers Website: http://my_site.de"
-                       filter="raw"
-                       size="100" >
-                </field>
+
                 <field name="Accept Cookie Option"
                        type="spacer"
                        hr="false" >
@@ -395,5 +396,4 @@
             </fieldset>
         </fields>
     </config>
-	
 </extension>

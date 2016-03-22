@@ -347,7 +347,7 @@ endif; ?>
 		?>
 	<?php endif; ?>
 
-	<div id="accept-cookie-container" class="box info" style="display:none;position:fixed;bottom:-1em;font-size:.75em;width:100%;text-align:center;z-index:99999">
+	<div id="accept-cookie-container" class="box primary" style="display:none;position:fixed;bottom:-1em;font-size:.75em;width:100%;text-align:center;z-index:99999">
 		<p><?php echo htmlspecialchars($c_infotext); ?>
 		<?php if (($c_linktext != "Cookie link caption") and ($c_link != "http://my_site.de")): ?>
 			<a href="<?php echo htmlspecialchars($c_link); ?>">
