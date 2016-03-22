@@ -35,8 +35,8 @@ $whichmethod    = $this->params->get('whichmethod');
 $fontloadercss  = $this->params->get('fontloadercss');
 $fontloaderjs   = $this->params->get('fontloaderjs');
 // header style
-$headerbackground = $this->params->get('headerbackground');
-$hltext         = $this->params->get('hltext');
+$headerbackground   = $this->params->get('headerbackground');
+$hltext             = $this->params->get('hltext');
 // call to action
 $buttontext     = $this->params->get('buttontext');
 $buttonlink     = $this->params->get('buttonlink');
@@ -49,7 +49,7 @@ $c_buttontext   = $this->params->get('cookiebuttontext');
 $c_linktext     = $this->params->get('cookielinktext');
 $c_link         = $this->params->get('cookielink');
 // mobify
-$mobify = $this->params->get('mobify');
+$mobify         = $this->params->get('mobify');
 
 // generator tag
 $this->setGenerator(null);

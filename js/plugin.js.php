@@ -1,11 +1,12 @@
 <?php
 // get template params
-$analytics = $this->params->get('analytics');
-$textresizer = $this->params->get('textresizer');
-$textindent = $this->params->get('textindent');
-$headerbackground = $this->params->get('headerbackground');
-$params = $app->getParams();
-$pageclass = $params->get('pageclass_sfx');
+$analytics          = $this->params->get('analytics');
+$textresizer        = $this->params->get('textresizer');
+$textindent         = $this->params->get('textindent');
+$headerbackground   = $this->params->get('headerbackground');
+$params             = $app->getParams();
+$pageclass          = $params->get('pageclass_sfx');
+$hltext             = $this->params->get('hltext');
 ?>
 
 <script type="text/javascript">
@@ -284,7 +285,8 @@ $pageclass = $params->get('pageclass_sfx');
     });
     <?php endif; ?>
 
-    // typographic quotes
+    // typographic quotes (nicht für jmdach oder jugfulda wg frontend editing)
+	<?php if ($hltext == "default") : ?>
     (typeof('jQuery') == 'function' ? jQuery : function ( callback ) {
         var addListener = document.addEventListener || document.attachEvent,
             removeListener = document.removeEventListener ? "removeEventListener" : "detachEvent",
@@ -324,6 +326,7 @@ $pageclass = $params->get('pageclass_sfx');
             }
         }
     });
+	<?php endif; ?>
 
     //  google analytics code asynchron + anonym
     <?php if ($analytics != "UA-XXXXX-X"): ?>
