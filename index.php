@@ -146,18 +146,38 @@ endif; ?>
 	<!-- Add to homescreen for Chrome on Android -->
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="<?php echo htmlspecialchars($sitename); ?>">
-	<link rel="icon" sizes="192x192" href="<?php echo $tpath; ?>/images/touch/chrome-touch-icon-192x192.png">
+
+	<?php if ($hltext == "default") : ?>
+		<link rel="icon" sizes="192x192" href="<?php echo $tpath; ?>/images/touch/chrome-touch-icon-192x192.png">
+	<?php elseif ($hltext == "jmag") : ?>
+		<link rel="icon" sizes="192x192" href="<?php echo $tpath; ?>/images/jmdach/chrome-touch-icon-192x192.png">
+	<?php elseif ($hltext == "jugfulda"): ?>
+		<link rel="icon" sizes="192x192" href="<?php echo $tpath; ?>/images/jugfulda/chrome-touch-icon-192x192.png">
+	<?php endif; ?>
 
 	<!-- Add to homescreen for Safari on iOS -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-title" content="<?php echo htmlspecialchars($sitename); ?>">
-	<link rel="apple-touch-icon" href="<?php echo $tpath; ?>/images/touch/apple-touch-icon.png">
+
+	<?php if ($hltext == "default") : ?>
+		<link rel="apple-touch-icon" href="<?php echo $tpath; ?>/images/touch/apple-touch-icon.png">
+	<?php elseif ($hltext == "jmag") : ?>
+		<link rel="apple-touch-icon" href="<?php echo $tpath; ?>/images/jmdach/apple-touch-icon.png">
+	<?php elseif ($hltext == "jugfulda"): ?>
+		<link rel="apple-touch-icon" href="<?php echo $tpath; ?>/images/jugfulda/apple-touch-icon.png">
+	<?php endif; ?>
 
 	<!-- Tile icon for Win8 (144x144 + tile color) -->
-	<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-	<meta name="msapplication-TileColor" content="#2c4d91">
+	<?php if ($hltext == "default") : ?>
+		<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+	<?php elseif ($hltext == "jmag") : ?>
+		<meta name="msapplication-TileImage" content="images/jmdach/ms-touch-icon-144x144-precomposed.png">
+	<?php elseif ($hltext == "jugfulda"): ?>
+		<meta name="msapplication-TileImage" content="images/jugfulda/ms-touch-icon-144x144-precomposed.png">
+	<?php endif; ?>
 
+	<meta name="msapplication-TileColor" content="#2c4d91">
 	<meta name="theme-color" content="#3372DF">
 
 	<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page
