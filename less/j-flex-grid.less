@@ -30,7 +30,7 @@
 
     // flex grow factor grid widths
     .flex-@{i} {
-        .flex(@i 1 auto);
+        .flex(@i 1 0);
     }
 
     // classic grid percentage widths
@@ -71,7 +71,7 @@
 // make grid
 .make-grid(@column-number);
 
-// flex container props
+// flex container properties
 // justify content
 .start {
     .justify-content(flex-start);
@@ -96,6 +96,7 @@
     .justify-content(space-between);
 }
 
+// flex items properties
 // align items
 .top {
     .align-items(flex-start);
@@ -107,6 +108,10 @@
 
 .bottom {
     .align-items(flex-end);
+}
+
+.equal {
+    .align-items(stretch);
 }
 
 // gutter and space
