@@ -19,7 +19,6 @@
 // primary- und accent-color ala material design
 @color-primary:         @colorIndigo900;
 @color-accent:          @colorIndigo300;
-// @color-accent:          @colorAmberA700;
 
 // primary und accent text color je nach primary und accent color
 @color-primary-text:    @smoke;
@@ -32,9 +31,6 @@
 @color-aside-back:          @smoke; // on desktop, on mobile > @primary-color
 @color-breadcrumbs-back:    @colorIndigo400;
 
-//
-// editing not recommended
-//
 // color sync
 // brand color mit primary color in sync
 @color-brand:           @color-primary;
@@ -67,6 +63,8 @@
 @font-size-small:   87.5%; // percentage value (16 * 87.5% = 14px)
 @font-size-mini:    75%; // percentage value (16 * 75% = 12px)
 
+
+// responsive typo scale mixin
 // 3 heading scale modes
 @ratio-default: 1.20; // mobile scale
 @ratio-medium: 1.25; // tablet and medium desktop scale
@@ -82,12 +80,14 @@
 // 1.500 — Perfect Fifth
 // 1.618 — Golden Ratio
 
+
 // primary fonts to select
 @body-font:    'Fira Sans';
 @heading-font: 'Fira Sans';
 @mono-font:    'Fira Mono';
 
-// weights to choose and combine
+
+// font-weights to choose and combine
 @thin:          100;
 @hairline:      @thin;
 
@@ -111,7 +111,7 @@
 @black:         900;
 
 
-// TypeScale Unit
+// Type-Scale-Unit
 @type-scale-unit-value: em;
 @type-scale-base-value: 1em;
 
@@ -122,7 +122,16 @@
 @small-paragraph-val: @indent-val / 4;
 
 
-// bootstrap variables
+// flex grid mixin variables
+// column numbers
+@column-number: 12;
+
+// gutters
+@gutter: .5em; // not on mobile
+@space: .5em; // always
+
+
+// bootstrap variables / legacy
 @baseBorderRadius: .2em;
 @baseLineHeight: 20px;
 @shadow: @gainsboro;
