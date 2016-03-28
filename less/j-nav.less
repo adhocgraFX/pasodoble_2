@@ -15,6 +15,14 @@ nav {
 		padding: 0;
 		list-style-type: none;
 
+        ul.nav-child {
+            display: none;
+        }
+
+        li:hover ul.nav-child {
+            display: block;
+        }
+
 		li {
 			margin: 0;
 
@@ -58,20 +66,16 @@ nav {
 		}
 	}
 
-	ul.nav-child {
-        display: none;
-    }
-
-    ul.nav li:hover ul.nav-child {
-        display: block;
-    }
-
-    ul.nav-child {
+    ul.nav ul.nav-child {
         position: relative;
         margin: 0;
         padding: 0;
         list-style-type: none;
         z-index: 10000;
+
+        ul.nav-child li a {
+            padding-left: 2.5em;
+        }
 
         li {
             text-align: left;
@@ -92,7 +96,7 @@ nav {
                     font-weight: normal;
                     font-size: 1em;
                     line-height: 1;
-                    margin: 0 .5em;
+                    margin: 0 .5em 0 0;
                     -webkit-font-smoothing: antialiased;
                     -moz-osx-font-smoothing: grayscale;
                     content: "\e601";
@@ -122,6 +126,7 @@ nav {
 			li {
                 .align-self(center);
 
+
                 &.current, &.active {
 
                 }
@@ -141,34 +146,55 @@ nav {
 					height: 4em;
 				}
 			}
-		}
 
-        ul.nav-child {
-            position: absolute;
-            margin: -.5em 0 0 .5em;
-			padding: .5em 0;
-            background: @smoke;
-			.border-radius(@baseBorderRadius);
-            border: 1px solid @color-primary;
+            ul.nav-child {
+                position: absolute;
+                margin: -.5em 0 0 .5em;
+                padding: .5em 0;
+                background: @smoke;
+                .border-radius(@baseBorderRadius);
+                border: 1px solid @color-primary;
 
-            opacity: 0.90;
-            filter: Alpha(Opacity=90);
+                opacity: 0.90;
+                filter: Alpha(Opacity=90);
 
-			li {
-				text-align: left;
-                background: @color-brand;
+                li {
+                    text-align: left;
+                    background: @color-brand;
 
-                a {
-					padding: 1em;
-					height: 3em;
-                    color: @color-primary-text;
+                    &.deeper, &.parent {
+                        height: 3em;
+                    }
 
-                    &:before {
-                        content: "";
-                        margin: 0;
+                    a {
+                        padding: 1em;
+                        height: 3em;
+                        color: @color-primary-text;
+
+                        &:before {
+                            content: "";
+                            margin: 0;
+                        }
                     }
                 }
-			}
+
+                ul.nav-child {
+                    display: none;
+
+                    right: -5em;
+                    top: 1.5em;
+
+                    li a {
+                        padding-left: 1em;
+                    }
+                }
+
+                li:hover ul.nav-child {
+                    display: block;
+                }
+
+
+            }
 		}
 	}
 }
