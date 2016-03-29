@@ -1,9 +1,6 @@
 // tags
 div.tags {
-    .make-block;
-    width: 100%;
-    margin: .5em 0 1em 0;
-    padding: 0;
+    padding: 0 0 1em 0;
     font-size: @font-size-small;
 }
 
@@ -242,11 +239,12 @@ ul.list-striped {
 
 // show tags von php-roberto .content-tags
 div.content-tags {
-    .make-block;
-    width: 100%;
-    margin: .5em 0 1em 0;
+    margin: .5em 0;
     padding: 0;
     font-size: @font-size-small;
+    min-height: 1em;
+    overflow: hidden;
+    display: block;
 
     ul {
         list-style-type: none;
