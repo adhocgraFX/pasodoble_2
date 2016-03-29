@@ -259,7 +259,7 @@ div.current {
 // ol nav für nav tabs
 ul.nav,
 ol.nav.nav-tabs.nav-stacked {
-    padding: 0;
+    // padding: 0;
 }
 
 // edit form
@@ -352,54 +352,7 @@ div.edit.item-page {
     }
 }
 
-// show tags von php roberto überschreiben mit .content-tags
-div.content-tags {
-    margin: .5em 0;
-    padding: 0;
-    font-size: .875em;
-    min-height: 1em;
-    overflow: hidden;
-    display: block;
-
-    ul {
-        list-style-type: none;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-
-        li {
-            margin: 0;
-            padding: 0;
-
-            a {
-                display: inline-block;
-                padding: .25em .5em;
-                margin: 0 .25em .25em 0;
-                float: left;
-                color: @concrete-darker;
-                background: @gainsboro-light;
-                .border-radius(@baseBorderRadius);
-                font-weight: normal;
-                text-decoration: none;
-                cursor: pointer;
-                line-height: 1.4;
-
-                &:hover {
-                    color: @whitesmoke;
-                    background: @concrete;
-                }
-
-                &:focus, &:active {
-                    color: @whitesmoke;
-                    background: @concrete-dark;
-                }
-            }
-        }
-    }
-}
-
 // language switcher
-
 .module._languages {
     text-align: center;
     height: 3.45em;
@@ -446,37 +399,6 @@ table {
     font-size: 0.875em;
 }
 
-// tags bootstrap list striped
-ul.list-striped {
-    list-style-type: none;
-    margin: .5em 0;
-    padding: 0;
-
-    li {
-        list-style-type: none;
-        padding: .5em;
-        margin: .5em 0;
-        background: @smoke;
-        display: block;
-        font-size: .875em;
-        border: 1px solid @concrete;
-        .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
-
-        a {
-            text-transform: uppercase; // je nach geschmack
-        }
-
-        a:hover, a:active {
-            background: transparent !important;
-            text-decoration: underline !important;
-        }
-
-        h3, h4 {
-            font-size: 1.125em;
-        }
-    }
-}
-
 // list unstyled
 ul.unstyled {
     list-style-type: none;
@@ -511,6 +433,13 @@ div.checkbox-control-group {
     div.checkbox-label {
         .make-block;
         width: auto;
+    }
+}
+
+div.btn-group {
+
+    &.pull-right {
+        float: right;
     }
 }
 
