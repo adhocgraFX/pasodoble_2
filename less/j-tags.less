@@ -200,12 +200,13 @@ ul.list-striped {
         list-style-type: none;
         position: relative;
         display: block;
-        padding: 0;
+        padding: .5em 1em;
         margin: 0;
+        border-bottom: 1px solid @gainsboro-light;
 
         h3, h4 {
             font-size: 1.125em;
-            margin: 0;
+            margin: .25em 0;
         }
 
         a {
@@ -217,11 +218,7 @@ ul.list-striped {
             float: left;
             display: block;
             width: 100%;
-            padding: .5em 1em;
-            margin: 0;
             color: @color-link;
-            background: @smoke;
-            border-bottom: 1px solid @gainsboro-light;
 
             -webkit-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
@@ -229,18 +226,12 @@ ul.list-striped {
             &:hover,
             &:focus {
                 color: @color-link-hover;
-                background: @gainsboro-lighter;
+                text-decoration: underline;
             }
 
             // &.active,
             &:active {
                 color: @color-link-visited;
-                background: @gainsboro-light;
-            }
-
-            &.active {
-                color: @color-link-visited;
-                background: @clouds;
             }
         }
     }
