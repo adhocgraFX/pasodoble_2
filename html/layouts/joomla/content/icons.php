@@ -22,13 +22,13 @@ $canEdit = $displayData['params']->get('access-edit');
 				<?php // Note the actions class is deprecated. Use dropdown-menu instead. ?> -->
 				<ul class="actions">
 					<?php if ($displayData['params']->get('show_print_icon')) : ?>
-						<li class="print-icon btn btn-blank"> <?php echo JHtml::_('icon.print_popup', $displayData['item'], $displayData['params']); ?> </li>
+						<li class="print-icon btn btn-small"> <?php echo JHtml::_('icon.print_popup', $displayData['item'], $displayData['params']); ?> </li>
 					<?php endif; ?>
 					<?php if ($displayData['params']->get('show_email_icon')) : ?>
-						<li class="email-icon btn btn-blank"> <?php echo JHtml::_('icon.email', $displayData['item'], $displayData['params']); ?> </li>
+						<li class="email-icon btn btn-small"> <?php echo JHtml::_('icon.email', $displayData['item'], $displayData['params']); ?> </li>
 					<?php endif; ?>
 					<?php if ($canEdit) : ?>
-						<li class="edit-icon btn btn-blank"> <?php echo JHtml::_('icon.edit', $displayData['item'], $displayData['params']); ?> </li>
+						<li class="edit-icon btn btn-small"> <?php echo JHtml::_('icon.edit', $displayData['item'], $displayData['params']); ?> </li>
 					<?php endif; ?>
 				</ul>
 			</div>

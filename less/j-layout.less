@@ -245,6 +245,40 @@ section.bottom {
         }
     }
 
+    body.cards {
+        section.main-container main {
+            section.content  {
+                max-width: 100% !important;
+
+                section.cards-container {
+                    .flex-display;
+                    .flex-flow(row wrap);
+                    .justify-content(center);
+                    .align-items(stretch);
+
+                    article {
+                        .flex(1 1 auto);
+                        max-width: 40em;
+
+                        &.leading {
+                            width: 24em;
+                            min-width: 8em;
+                        }
+
+                        &.item {
+                            width: 24em;
+                            min-width: 8em;
+                        }
+
+                        &:last-of-type {
+                            max-width: 40em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .search-container {
         background-color: transparent;
         height: 4em;
