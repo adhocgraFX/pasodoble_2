@@ -387,4 +387,14 @@ $hltext             = $this->params->get('hltext');
         });
     });
 
+    // masonry
+    // init Masonry after all images have loaded
+    var $grid = jQuery('.masonry-container').imagesLoaded( function() {
+        $grid.masonry({
+            columnWidth: '.masonry-item',
+            itemSelector: '.masonry-item',
+            percentPosition: true
+            });
+    });
+
 </script>

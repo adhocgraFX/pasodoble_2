@@ -31,8 +31,9 @@ gulp.task('script', function () {
         'js/transition.js',
         'js/touch.js',
         'js/lightbox.js',
-        // flickity by dessandro
+        // dessandro
         'js/flickity.pkgd.min.js',
+        'js/masonry.pkgd.min.js',
         // doubletaptogo > hover lösung für drop downs
         'js/doubletaptogo.min.js',
         // prism code highlighting

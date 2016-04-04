@@ -30,8 +30,9 @@ require('transition.js');
 require('touch.js');
 require('lightbox.js');
 
-// flickity by dessandro
+// dessandro
 require('flickity.pkgd.min.js');
+require('masonry.pkgd.min.js');
 
 // doubletaptogo > hover lösung für drop downs
 require('doubletaptogo.min.js');

@@ -56,9 +56,10 @@ $info    = $params->get('info_block_position', 0);
 
 	<?php endif; ?>
 
-	<hr class="info">
-
 	<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
+
+		<hr class="info">
+
 		<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
 	<?php  endif; ?>
 

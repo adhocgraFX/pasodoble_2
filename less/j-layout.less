@@ -4,6 +4,19 @@ body {
     // background-color: @color-primary;
 }
 
+body.masonry {
+    section.main-container main {
+        section.content  {
+            section.masonry-container {
+                div.grid-sizer,
+                article.masonry-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 section.layout {
     background-color: @color-primary;
 }
@@ -279,6 +292,20 @@ section.bottom {
         }
     }
 
+    body.masonry {
+        section.main-container main {
+            section.content  {
+                max-width: 100% !important;
+
+                section.masonry-container {
+                    article.masonry-item {
+                            width: 45%;
+                    }
+                }
+            }
+        }
+    }
+
     .search-container {
         background-color: transparent;
         height: 4em;
@@ -330,6 +357,20 @@ section.bottom {
 }
 
 @media screen and (min-width: 80em) {
+
+    body.masonry {
+        section.main-container main {
+            section.content  {
+                max-width: 100% !important;
+
+                section.masonry-container {
+                    article.masonry-item {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
 
 }
 
