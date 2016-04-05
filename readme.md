@@ -18,6 +18,9 @@
 * analytics > options
 * font resizer > options
 * accept cookies info > options
+* instagram-like css img filter-classes
+* category blog with cards styling; page-class-suffix
+* category blog with masonry styling; page-class-suffix > [masonry](http://http://masonry.desandro.com/ "masonry")
 
 ###PasoDoble in action
 [pasodoble](http://pasodoble.adhocgrafx.de "PasoDoble")
@@ -50,7 +53,7 @@
 		gulp print: print css	
 		gulp watch
 
-###Work in progress!
+### Work in progress!
 #### todos:
 * der heilige Gral - die Suche geht weiter - gulpfile für js und less
 * unset über options steuerbar; dann wird template.js.php anstelle app.js geladen 

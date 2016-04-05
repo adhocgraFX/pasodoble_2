@@ -15,6 +15,7 @@ JHtml::_('behavior.caption');
 ?>
 
 <?php if ($this->pageclass_sfx == "cards") : ?>
+	
 	<div class="blog <?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
 		<?php if ($this->params->get('show_page_heading')) : ?>
 			<div class="page-header">
@@ -330,4 +331,5 @@ JHtml::_('behavior.caption');
 				<?php echo $this->pagination->getPagesLinks(); ?> </div>
 		<?php endif; ?>
 	</div>
+
 <?php endif; ?>

@@ -17,7 +17,8 @@ JHtml::_('behavior.caption');
 // It will be a separate class if the user starts it with a space
 ?>
 
-<?php if ($this->pageclass_sfx ="cards") : ?>
+<?php if ($this->pageclass_sfx == "cards") : ?>
+	
 	<div class="blog-featured <?php echo $this->pageclass_sfx;?>" itemscope itemtype="https://schema.org/Blog">
 		<?php if ($this->params->get('show_page_heading') != 0) : ?>
 			<div class="page-header">
@@ -91,7 +92,85 @@ JHtml::_('behavior.caption');
 		<?php endif; ?>
 
 	</div>
+
+<?php elseif ($this->pageclass_sfx == "masonry") : ?>
+	
+	<div class="blog-featured <?php echo $this->pageclass_sfx;?>" itemscope itemtype="https://schema.org/Blog">
+		<?php if ($this->params->get('show_page_heading') != 0) : ?>
+			<div class="page-header">
+				<h1>
+					<?php echo $this->escape($this->params->get('page_heading')); ?>
+				</h1>
+			</div>
+		<?php endif; ?>
+
+		<section class="masonry-container">
+			<?php $leadingcount = 0; ?>
+			<?php if (!empty($this->lead_items)) : ?>
+				<?php foreach ($this->lead_items as &$item) : ?>
+
+					<article class="masonry-item leading"
+					         itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+						<?php
+						$this->item = & $item;
+						echo $this->loadTemplate('item');
+						?>
+					</article>
+
+					<?php $leadingcount++; ?>
+				<?php endforeach; ?>
+			<?php endif; ?>
+
+			<?php
+			$introcount = (count($this->intro_items));
+			$counter = 0;
+			?>
+
+			<?php if (!empty($this->intro_items)) : ?>
+				<?php foreach ($this->intro_items as $key => &$item) : ?>
+					<?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
+					<?php if ($rowcount == 1) : ?>
+						<?php $row = $counter / $this->columns; ?>
+					<?php endif; ?>
+
+					<article class="masonry-item item"
+					         itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+						<?php
+						$this->item = & $item;
+						echo $this->loadTemplate('item');
+						?>
+					</article>
+					<!-- end item -->
+					<?php $counter++; ?>
+
+					<?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
+					<?php endif; ?>
+				<?php endforeach; ?>
+			<?php endif; ?>
+		</section><!-- end section -->
+
+		<?php if (!empty($this->link_items)) : ?>
+			<div class="items-more">
+				<?php echo $this->loadTemplate('links'); ?>
+			</div>
+		<?php endif; ?>
+
+		<?php if ($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2 && $this->pagination->pagesTotal > 1)) : ?>
+			<div class="pagination">
+
+				<?php if ($this->params->def('show_pagination_results', 1)) : ?>
+					<p class="counter pull-right">
+						<?php echo $this->pagination->getPagesCounter(); ?>
+					</p>
+				<?php  endif; ?>
+				<?php echo $this->pagination->getPagesLinks(); ?>
+			</div>
+		<?php endif; ?>
+
+	</div>
+
 <?php else: ?>
+	
 	<div class="blog-featured <?php echo $this->pageclass_sfx;?>" itemscope itemtype="https://schema.org/Blog">
 		<?php if ($this->params->get('show_page_heading') != 0) : ?>
 			<div class="page-header">
@@ -172,5 +251,6 @@ JHtml::_('behavior.caption');
 		<?php endif; ?>
 
 	</div>
+
 <?php endif; ?>
 
