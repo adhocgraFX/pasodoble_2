@@ -358,8 +358,63 @@ ol {
 	}
 }
 
-//	Blockquotes
 
+// details / summary
+details {
+	display: block;
+	margin-bottom: @paragraph-val;
+	cursor: pointer;
+	border: 0;
+
+	summary {
+		padding: .5em 1em;
+		color: @color-link;
+		background: @smoke;
+		border: 1px solid @gainsboro-light;
+		cursor: hand;
+
+		-webkit-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+
+		&:hover {
+			color: @color-link-hover;
+			background: @gainsboro-lighter;
+		}
+
+		&:active,
+		&:focus {
+			color: @color-link-focus;
+			background: @clouds;
+		}
+	}
+
+	div {
+		display: block;
+		cursor: pointer;
+		font-size: @font-size-small;
+		padding: .5em 1em;
+		border: 1px solid @gainsboro-light;
+	}
+}
+
+details[open] {
+
+	summary {
+		&:hover {
+			color: @color-link-hover;
+			background: @gainsboro-lighter;
+		}
+
+		&:active,
+		&:focus {
+			color: @color-link-focus;
+			background: @clouds;
+		}
+	}
+}
+
+
+//	Blockquotes
 blockquote, blockquote p, q, cite {
 	font-size: 1.125em;
 	line-height: @line-height-default;

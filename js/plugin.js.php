@@ -395,6 +395,6 @@ $hltext             = $this->params->get('hltext');
             itemSelector: '.masonry-item',
             percentPosition: true
             });
-    });
+    });  
 
 </script>
