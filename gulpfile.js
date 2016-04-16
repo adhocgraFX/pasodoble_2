@@ -37,7 +37,7 @@ gulp.task('script', function () {
         // doubletaptogo > hover lösung für drop downs
         'js/doubletaptogo.min.js',
         // prism code highlighting
-        'js/prism.js'        
+        'js/prism.js'
     ])
         .pipe(uglify())
         .pipe(concat('app.js'))
