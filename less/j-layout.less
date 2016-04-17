@@ -68,7 +68,8 @@ section.layout {
 			margin: 0;
 
             a {
-                color: @smoke;
+                color: @color-primary-text;
+                text-decoration: none;
 				display: block;
 				padding: .75em;
 				height: 3em;
@@ -76,14 +77,12 @@ section.layout {
                 max-width: 3em;
 
 				&:hover, &:focus {
-                    background-color: @color-link-hover;
-                    text-decoration: none;
+                    background-color: lighten(@color-primary, 10%);
                     outline: 0;
 				}
 
                 &:active, &.textresizer-active {
-                    background-color: transparent;
-                    color: @color-link;
+                    background: darken(@color-primary, 10%);
                     outline: 0;
                 }
 
@@ -118,7 +117,7 @@ nav {
 }
 
 footer {
-	background: @color-primary;
+	background: @color-footer-back;
     font-size: .875em;
 }
 
@@ -235,7 +234,7 @@ section.bottom {
 
         aside.sidebar-container,
         aside.leftbar-container {
-            margin: 0;
+            margin: 1em 0 0 0;
 
             .flex-display;
             .flex-flow(row wrap);

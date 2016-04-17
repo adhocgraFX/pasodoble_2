@@ -22,7 +22,7 @@
 // buttons: background: color accent; text: color accent text
 
 // primary- und accent-color ala material design
-@color-primary:         @colorIndigo900;
+@color-primary:         @colorIndigo800;
 @color-accent:          @colorIndigo300;
 
 // primary und accent text color je nach primary und accent color
@@ -31,11 +31,11 @@
 
 // section colors
 @color-slider-back:         @gainsboro-dark;
-@color-top-row-back:        @gainsboro-light;
-@color-bottom-row-back:     @gainsboro-light;
+@color-top-row-back:        @gainsboro;
+@color-bottom-row-back:     @concrete;
 @color-aside-back:          @smoke; // on desktop, on mobile > @primary-color
-@color-breadcrumbs-back:    @colorIndigo400;
-
+@color-breadcrumbs-back:    @color-primary;
+@color-footer-back:         darken(@color-primary, 10%);
 
 // color sync
 // brand color mit primary color in sync
@@ -72,9 +72,9 @@
 
 // responsive type scale mixin
 // 3 heading scale modes
-@ratio-default: 1.20; // mobile scale
-@ratio-medium: 1.25; // tablet and medium desktop scale
-@ratio-large: 1.33; // large desktop scale
+@ratio-default: 1.125; // mobile scale
+@ratio-medium: 1.20; // tablet and medium desktop scale
+@ratio-large: 1.333; // large desktop scale
 
 // font scale:
 // 1.067 — Minor Second

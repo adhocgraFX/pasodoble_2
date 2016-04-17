@@ -46,6 +46,7 @@ JHtml::_('behavior.caption');
 	<?php endif; ?>
 	
 	<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
+
 		<div class="page-header">
 			<?php if ($params->get('show_title')) : ?>
 				<h2 itemprop="name">
@@ -109,7 +110,7 @@ JHtml::_('behavior.caption');
 					itemprop="image"/> 
 			</div>
 		<?php endif; ?>
-		
+	
 		<?php
 		if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && !$this->item->paginationrelative):
 			echo $this->item->pagination;
