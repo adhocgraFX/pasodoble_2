@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/adhocgraFX/pasodoble_2#readme",
   "devDependencies": {
+    "devbridge-styleguide": "^0.4.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.0.2",
     "gulp-concat": "^2.6.0",
