@@ -15,9 +15,11 @@ JHtml::_('behavior.caption');
 
 // If the page class is defined, add to class as suffix.
 // It will be a separate class if the user starts it with a space
+
+$pageclass = ($this->pageclass_sfx);
 ?>
 
-<?php if ($this->pageclass_sfx == "cards") : ?>
+<?php if (($pageclass == "cards") or ($pageclass == "header-img cards")) : ?>
 	
 	<div class="blog-featured <?php echo $this->pageclass_sfx;?>" itemscope itemtype="https://schema.org/Blog">
 		<?php if ($this->params->get('show_page_heading') != 0) : ?>
@@ -93,7 +95,7 @@ JHtml::_('behavior.caption');
 
 	</div>
 
-<?php elseif ($this->pageclass_sfx == "masonry") : ?>
+<?php elseif (($pageclass == "masonry") or ($pageclass == "header-img masonry")) : ?>
 	
 	<div class="blog-featured <?php echo $this->pageclass_sfx;?>" itemscope itemtype="https://schema.org/Blog">
 		<?php if ($this->params->get('show_page_heading') != 0) : ?>

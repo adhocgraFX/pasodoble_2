@@ -126,7 +126,8 @@ JHtml::_('behavior.caption');
 		
 		<?php if ($info == 1 || $info == 2) : ?>
 
-			<div class="info">
+			<hr class="info">
+
 			<?php if ($useDefList) : ?>
 				<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
 			<?php endif; ?>
@@ -148,7 +149,6 @@ JHtml::_('behavior.caption');
 				<?php endif; ?>
 			<?php endif; ?>
 		<?php endif; ?>
-		</div>
 
 		<?php
 		if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && !$this->item->paginationrelative):

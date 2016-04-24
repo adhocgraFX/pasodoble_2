@@ -166,20 +166,21 @@ dl.article-info {
         width: 25%;
     }
 
-    article {
-        padding: .5em;
-        margin: .5em 0;
-    }
-
     body.masonry,
     body.cards {
         article {
             padding: 1em;
             margin: .5em;
-            font-size: @font-size-mini;
+
+            &.item-page {
+                padding: .5em;
+                margin: 0 auto;
+                max-width: 32em;
+            }
 
             &.leading,  // flex-grid
             &[class^="leading-"] {
+                font-size: @font-size-mini;
                 border: 1px solid @concrete;
                 .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
 
@@ -205,6 +206,7 @@ dl.article-info {
             }
 
             &.item {
+                font-size: @font-size-mini;
                 border: 1px solid @concrete;
                 .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
 

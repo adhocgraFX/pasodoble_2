@@ -263,7 +263,7 @@ $hltext             = $this->params->get('hltext');
     });
 
     // go to nav
-    <?php if (($headerbackground) and ($pageclass=="header-img")): ?>
+    <?php if (($headerbackground) and ($pageclass=="header-img" || $pageclass == "header-img masonry" || $pageclass == "header-img cards")): ?>
     jQuery(window).load(function() {
         var offset = 120;
         var duration = 500;
@@ -396,5 +396,4 @@ $hltext             = $this->params->get('hltext');
             percentPosition: true
             });
     });
-
 </script>

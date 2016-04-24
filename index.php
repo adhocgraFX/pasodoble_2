@@ -22,9 +22,11 @@ $layout    = $app->input->getCmd('layout', '');
 $task      = $app->input->getCmd('task', '');
 $sitename  = $app->get('sitename');
 $pageclass = $params->get('pageclass_sfx');
+
 $tpath     = $this->baseurl . '/templates/' . $this->template;
 $tpl       = $app->getTemplate(true);
 $params    = $tpl->params;
+
 $action    = $menu->getActive() == $menu->getDefault() ? ('front') : ('site');
 
 // get template params
@@ -194,7 +196,7 @@ endif; ?>
 
 <body
 	class="<?php echo $option . ' view-' . $view . ($layout ? ' layout-' . $layout : ' no-layout') . ($task ? ' task-' . $task : ' no-task'); ?>
-    <?php echo ($action) . ' ' . $active->alias . ' ' . $pageclass; ?>"
+    <?php echo ($action) . ' ' . $active->alias . ' ' . htmlspecialchars($pageclass); ?>"
 	role="document">
 
 <header class="app-bar promote-layer" role="banner">
@@ -241,7 +243,7 @@ endif; ?>
 					class="icon-arrow-forward"></span></a>
 		</section>
 	<?php endif; ?>
-	<?php if (($headerbackground) and ($pageclass == "header-img")): ?>
+	<?php if (($headerbackground) and ($pageclass == "header-img" || $pageclass == "header-img masonry" || $pageclass == "header-img cards")): ?>
 		<a href="#navdrawer" class="go-down"><span class="icon-chevron-down"></span><p hidden>Navigation</p></a>
 	<?php endif; ?>
 </header>

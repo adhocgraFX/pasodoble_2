@@ -12,9 +12,11 @@ defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 JHtml::_('behavior.caption');
+
+$pageclass = ($this->pageclass_sfx);
 ?>
 
-<?php if ($this->pageclass_sfx == "cards") : ?>
+<?php if ($pageclass == "cards") : ?>
 	
 	<div class="blog <?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
 		<?php if ($this->params->get('show_page_heading')) : ?>
@@ -120,7 +122,7 @@ JHtml::_('behavior.caption');
 		<?php endif; ?>
 	</div>
 
-<?php elseif ($this->pageclass_sfx == "masonry") : ?>
+<?php elseif ($pageclass == "masonry") : ?>
 
 	<div class="blog <?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
 		<?php if ($this->params->get('show_page_heading')) : ?>

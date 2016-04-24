@@ -15,6 +15,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 $canEdit = $this->item->params->get('access-edit');
 $info    = $params->get('info_block_position', 0);
 ?>
+
 <?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
 || ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
 <div class="system-unpublished">
@@ -57,9 +58,7 @@ $info    = $params->get('info_block_position', 0);
 	<?php endif; ?>
 
 	<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
-
 		<hr class="info">
-
 		<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
 	<?php  endif; ?>
 
