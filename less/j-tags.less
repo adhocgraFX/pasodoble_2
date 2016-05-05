@@ -46,7 +46,6 @@ a.label,
         .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
         text-shadow: none;
     }
-
 }
 
 a.label,
@@ -243,7 +242,7 @@ div.content-tags {
     padding: 0;
     font-size: @font-size-small;
     min-height: 1em;
-    overflow: hidden;
+    // overflow: hidden;
     display: block;
 
     ul {
@@ -252,28 +251,34 @@ div.content-tags {
         margin: 0;
         padding: 0;
 
+        span {
+            display: block
+        }
+
         li {
             margin: 0;
             padding: 0;
+            display: inline-block;
 
             a {
                 display: inline-block;
-                padding: .5em 1em;
-                margin-top: 1em;
+                padding: .25em .5em;
+                margin-top: .5em;
                 margin-bottom: 0;
-                margin-right: .5em;
-                font-size: @font-size-default;
-                line-height: @line-height-default;
+                margin-right: .2em;
+                font-weight: normal;
+                // font-size: @font-size-small;
+                line-height: 1;
                 text-align: center;
                 vertical-align: middle;
                 cursor: pointer;
-                border: 0;
+                border: 0 !important;
                 .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
                 text-shadow: none;
                 -webkit-transition: all 0.3s ease-out;
                 transition: all 0.3s ease-out;
-                color: @gray;
-                background: @whitesmoke;
+                color: @color-primary-text;
+                background: @color-primary;
 
                 // Hover/focus state
                 &:hover,
@@ -282,8 +287,8 @@ div.content-tags {
                     text-shadow: none;
                     outline: 0;
                     .box-shadows(0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19));
-                    color: @gray;
-                    background: @whitesmoke-light;
+                    color: @color-primary-text;
+                    background: lighten(@color-primary, 10%);
                 }
 
                 // Focus state for keyboard and accessibility
@@ -299,8 +304,8 @@ div.content-tags {
                     outline: 0;
                     .box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
                     text-shadow: none;
-                    color: @gray;
-                    background: @whitesmoke-dark;
+                    color: @color-primary-text;
+                    background: darken(@color-primary, 10%);
                 }
             }
         }
